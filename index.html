@@ -33,15 +33,19 @@
       integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
       crossorigin="anonymous"
     ></script> 
-
+    <!-- fontossem -->
+     <link rel="stylesheet" href="css/all.css">
+    <!-- lyber -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Style aur conncition -->
-    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+    <link rel="stylesheet" href="css/bootstrap.css">
     <!-- <link rel="stylesheet" href="../../bootstrap-icons-1.11.3/font/bootstrap-icons.min.css"> -->
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
+    <!-- <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" data-bs-title="Popover title" data-bs-content="lhmhmhù mhmh">nn</button> -->
     <nav
       class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow"
     >
@@ -60,8 +64,8 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <input
-      onkeyup="recherch(this.value)"
-        class="form-control form-control-dark w-100"
+        onkeyup="recherch(this.value)"
+        class="form-control form-control-dark w-100 mx-5 col-xs-2 col-sm-6 position-relative top-50 Start-50 "
         id="search"
         type="text"
         placeholder="Search"
@@ -75,7 +79,6 @@
         </li>
       </ul>
     </nav>
-
     <div class="container-fluid">
       <div class="row">
         <nav
@@ -201,7 +204,10 @@
                     </div>
                     <div class="col">
                       <label class="visually-hidden"  for="appareil">Appareil</label>
-                      <input type="text" class="form-control" id="appareil" placeholder="Samsung S20 Ult">
+                      <div class="input-group">
+                        <div class="input-group-text"><i class="bi bi-phone"></i></div>
+                        <input type="text" class="form-control" id="appareil" placeholder="Samsung S20 Ult">
+                      </div>
                     </div>
                     <div class="col">
                       <label class="visually-hidden"  for="numeroTélèphone">Numero télèphone</label>
@@ -244,13 +250,13 @@
                       <label class="visually-hidden"  for="rend">Rendez-vous</label>
                       <div class="input-group">
                         <div class="input-group-text"><i class="bi bi-calendar-date"></i></div>
-                        <input type="date" class="form-control" id="rend" placeholder="+216 98 765 432">
+                        <input type="date" class="form-control" id="rend">
                       </div>
                     </div>
                     <div class="col">
                       <label class="visually-hidden"  for="rentabilité">Rentabilité</label>
                       <div class="input-group">
-                        <div class="input-group-text"><i class="bi bi-calendar-date"></i></div>
+                        <div class="input-group-text"><i class="bi bi-currency-dollar"></i></div>
                         <input type="number" class="form-control" id="rentabilité" placeholder="+ 00.00 dt">
                       </div>
                     </div>
@@ -260,7 +266,7 @@
                   </div>
                   <div class="row p-4">
                     <div class="col">
-                      <button onclick="red()" type="submit" id="btnRecevoir" class="btn btn-primary" ><i class="bi bi-database-fill-add"></i> recevoir</button>
+                      <button onclick="red()"  id="btnRecevoir" class="btn btn-primary" ><i class="bi bi-database-fill-add"></i> recevoir</button>
                     </div>
                   </div>
                 </form>
@@ -273,30 +279,80 @@
                 <h3>Statstique <i class="bi bi-graph-up-arrow"></i></h3>
                 <div class="row align-items-center">
                   <div class="col-4">
-                <canvas id="myChart"></canvas>
+                      <canvas id="myChart"></canvas>
                   </div>
                   <div class="col-4">
-              <canvas id="myChart2"></canvas>
+                      <canvas id="myChart2"></canvas>
                   </div>
                   <div class="col-4 p-4 ">
-                    <table class="text-center bg-light">
-                      <tr class="border border-primary">
-                        <th class="text-primary border border-primary">Fornissuer</th>
-                        <th class="text-muted border border-primary">Solde</th>
-                      </tr>
-                      <tr>
-                        <td class="border border-primary">Samir</td>
-                        <td class="bg-success">0 dt</td>
-                      </tr>
-                      <tr>
-                        <td class="border border-primary">Haithem</td>
-                        <td class="bg-warning">-250 dt</td>
-                      </tr>
-                      <tr>
-                        <td class="border border-primary">Akrem</td>
-                        <td class="bg-danger">-1230 dt</td>
-                      </tr>
-                    </table>
+
+                    <div id="myApp">
+                      <h1>rapport </h1>
+                      <p>exempl {{ tabl[2] + 5 }} </p>
+                      <p>Prix toutal {{ som() }} </p>
+                      <p>cridi toutal {{ somF() }} </p>
+                      <p>{{ counter }} </p>
+                      <button @click="counter++">+ 1</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="container border primary">
+                      <h4 class="pt-4">Ajouter Fournisseur</h4>
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col">
+                            <label for="">Fournisseur</label>
+                            <input type="text"
+                            class="form-control" name="" id="nameFournisseur" aria-describedby="helpId" placeholder="">
+                            <small id="" class="form-text text-muted">name</small>
+                          </div>
+                          <div class="col">
+                            <label for="">prix</label>
+                            <input type="text"
+                            class="form-control" name="" id="crediFournisseur" aria-describedby="helpId" placeholder="">
+                            <small id="" class="form-text text-muted">unt Dinar</small>
+                          </div>
+                          
+                        </div>
+                        <div class="row">
+                          <div class="col"></div>
+                          <div class="col-3">
+                            <button class="btn btn-outline-danger" id="btnAjoutFor" onclick="fourn()">ajouter</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col ">
+                    <div class="table-responsive">
+                      <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">Credi</div>
+    
+                      <table class="table text-center table-striped table-sm">
+                        <thead>
+                          <tr class="">
+                            <th class="text-primary ">Fornissuer</th>
+                            <th class="text-muted ">Solde</th>
+                          </tr>
+                        </thead>
+                        <tbody id="tfbody">
+                          <!-- <tr>
+                            <td>Samir</td>
+                            <td class="bg-success-500">0 dt</td>
+                          </tr>
+                          <tr>
+                            <td>Haithem</td>
+                            <td class="bg-warning">-250 dt</td>
+                          </tr>
+                          <tr>
+                            <td>Akrem</td>
+                            <td class="bg-danger">-1230 dt</td>
+                          </tr> -->
+                        </tbody>
+                      </table>
+                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -305,25 +361,19 @@
 
 
   
-            <!-- <canvas
-              class="my-4 w-100"
-              id="myChart"
-              width="900"
-              height="380"
-            ></canvas> -->
-            
-  
             <h2><span class="text-primary">L</span>iste <span class="text-primary">C</span>lien</h2>
 
             <div class="table-responsive">
-              <table class="table table-striped table-sm">
+              <table class="table text-center table-striped table-sm">
                 <thead>
                   <tr>
-                    <th>#</th>
-                    <th>Nome Clien</th>
-                    <th>Apparer</th>
-                    <th>Numero télèphone</th>
-                    <th>Pane</th>
+                    <th>ID</th>
+                    <th>Nome Clien | <i class="bi bi-person"></i></th>
+                    <th>Apparer | <i class="bi bi-phone"></i></th>
+                    <th>Numero télèphone | <i class="bi bi-whatsapp"></i></th>
+                    <th>Panne | <i class="fa-solid fa-triangle-exclamation"></i></th>
+                    <th>Avence | <i class="fa-solid fa-hand-holding-dollar"></i></th>
+                    <th>Prix | <i class="bi bi-currency-dollar"></i></th>
                     <th>Statu</th>
                   </tr>
                 </thead>
@@ -339,11 +389,11 @@
         </main>
       </div>
 
-      <div class="loader"></div>
+      
 
     </div>
 
-    <script
+    <!-- <script
       src="/docs/5.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-DBjhmceckmzwrnMMrjI7BvG2FmRuxQVaTfFYHgfnrdfqMhxKt445b7j3KBQLolRl"
       crossorigin="anonymous"
@@ -358,13 +408,15 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
       integrity="sha384-i+dHPTzZw7YVZOx9lbH5l6lP74sLRtMtwN2XjVqjf3uAGAREAF4LMIUDTWEVs4LI"
       crossorigin="anonymous"
-    ></script> 
-    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
-    <!-- <script src="js/jquery-3.7.1.min.js"></script> -->
-    <!-- <script src="js/popper.min.js"></script> -->
+    ></script>  -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/popper.min.js"></script>
     <!-- <script src="../../dashboard.js"></script> -->
+     <script src="js/vue.js"></script>
     <!-- <script src="js/chart.min.js"></script> -->
-    <!-- <script src="js/chart.js"></script> -->
+    <script src="js/chart.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
