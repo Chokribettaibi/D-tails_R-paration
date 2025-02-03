@@ -79,6 +79,8 @@
         </li>
       </ul>
     </nav>
+    <div>
+    </div>
     <div class="container-fluid">
       <div class="row">
         <nav
@@ -287,16 +289,17 @@
                   <div class="col-4 p-4 ">
 
                     <div id="myApp">
-                      <h1>rapport </h1>
-                      <p>exempl {{ tabl[2] + 5 }} </p>
-                      <p>Prix toutal {{ som() }} </p>
+                      <h3 class="text-danger">rapport </h3>
+                      <!-- <p>exempl {{ tabl[2] + 5 }} </p> -->
+                      <p class="text-primary">Prix toutal {{ som() }} </p>
+                      <p> number appareil {{ somT() }} </p>
                       <p>cridi toutal {{ somF() }} </p>
-                      <p>{{ counter }} </p>
-                      <button @click="counter++">+ 1</button>
+                      <!-- <p>{{ counter }} </p> -->
+                      <!-- <button @click="counter++">+ 1</button> -->
                     </div>
                   </div>
                 </div>
-                <div class="row">
+                <div class="row ajoute-fournisser">
                   <div class="col">
                     <div class="container border primary">
                       <h4 class="pt-4">Ajouter Fournisseur</h4>
@@ -327,13 +330,14 @@
                   </div>
                   <div class="col ">
                     <div class="table-responsive">
-                      <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">Credi</div>
+                      <div class="p-3 text-primary-emphasis text-center bg-primary-subtle border border-primary-subtle rounded-3">Credi</div>
     
                       <table class="table text-center table-striped table-sm">
                         <thead>
                           <tr class="">
                             <th class="text-primary ">Fornissuer</th>
                             <th class="text-muted ">Solde</th>
+                            <th></th>
                           </tr>
                         </thead>
                         <tbody id="tfbody">
@@ -375,6 +379,7 @@
                     <th>Avence | <i class="fa-solid fa-hand-holding-dollar"></i></th>
                     <th>Prix | <i class="bi bi-currency-dollar"></i></th>
                     <th>Statu</th>
+                    <th></th>
                   </tr>
                 </thead>
                 <tbody id="tcbody">
@@ -411,7 +416,7 @@
     ></script> 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/popper.js"></script>
+    <!-- <script src="js/popper.js"></script> -->
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/popper.min.js"></script>
     <!-- <script src="../../dashboard.js"></script> -->
