@@ -304,20 +304,20 @@ function recherch(e){
 }
 // Calcule Toutal
 
-  let localObject = JSON.parse(localStorage.pro); 
-  let prixTot = 0;
-  for(let i = 0; i < product.length ; i++){
-    prixTot = prixTot + +localObject[i].prix;
-  };
+  // let localObject = JSON.parse(localStorage.pro); 
+  // let prixTot = 0;
+  // for(let i = 0; i < product.length ; i++){
+  //   prixTot = prixTot + +localObject[i].prix;
+  // };
 
-  let localObjectFour = JSON.parse(localStorage.proFor); 
-  let prixTotFour = 0;
-  for(let i = 0; i < productFor.length ; i++){
-    prixTotFour = prixTotFour + +localObjectFour[i].crediFournisseur;
-  };
+  // let localObjectFour = JSON.parse(localStorage.proFor); 
+  // let prixTotFour = 0;
+  // for(let i = 0; i < productFor.length ; i++){
+  //   prixTotFour = prixTotFour + +localObjectFour[i].crediFournisseur;
+  // };
 
 // let arry = [prixTot,prixTotFour,920,300,600, 700];
-let arry = [prixTot,prixTotFour,920,300,600, 700];
+let arry = [200,800,920,300,600, 700];
 const ctxn = document.getElementById('myChart');
 
   new Chart(ctxn, {
