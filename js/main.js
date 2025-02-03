@@ -15,6 +15,7 @@ let btnAjoutFor = document.getElementById('btnAjoutFor');
 let tfbody = document.getElementById('tfbody');
 let mood = 'create';
 let tmp; 
+let nmbA = document.getElementById('nmbA')
 
 
 // Crate Data
@@ -24,7 +25,7 @@ if(localStorage.pro != null){
 }else{
     product = [];
 };
-// create Clie
+// create Client
 function red (){
     let newPro = {
         nomeClient: nomeClient.value.toLocaleLowerCase(),
@@ -36,6 +37,10 @@ function red (){
         rend: rend.value,
         dateResption: new Date(),
     };
+    scroll({
+      top:100000,
+      behavior: 'smooth',
+    })
     console.log(mood)
     if(mood === 'create'){
       product.push(newPro);
@@ -50,7 +55,6 @@ function red (){
     shoData();
     clearData();
   };
-  // console.log(localStorage.value());
   
 // Creat Fourniusser
 let productFor=[];
@@ -70,7 +74,7 @@ if(localStorage.proFor != null){
   shoDataFor()
 };
 console.log(localStorage.proFor)
-// Clear inputs
+// Clear inputs Client
 function clearData(){
     nomeClient.value = '';
     numeroTélèphone.value = '';
@@ -79,14 +83,17 @@ function clearData(){
     avence.value = '';
     prix.value = '';
 };
+// Clear inputs Client
+function clearDataFur(){
+  nameFournisseur.value = '';
+  crediFournisseur.value = ''
+}
 
 // Validare Form 
 function validationForm(e){
   let nemeValid = false;
   let numerValid = false;
 
-  console.log(numeroTélèphone.value);
-  console.log(numeroTélèphone.length);
   if(numeroTélèphone.value !== "" && numeroTélèphone <= 8){
     console.log('valid');
   }
@@ -96,7 +103,7 @@ function validationForm(e){
   }
 }
 
-// Show Data cli
+// Show Data Client
 function shoData(){
     let tabl;
     for(let i = 0; i < product.length; i++){
@@ -145,7 +152,8 @@ function updateData(i){
   mood = 'update';
   tmp = i;
   btnRecevoir.innerHTML = 'Update';
-  scroll({
+  
+scroll({
     top:0,
     behavior: 'smooth',
   })
@@ -154,44 +162,44 @@ function updateData(i){
 }
  // Delete
 function deletData(i){
-  // const swalWithBootstrapButtons = Swal.mixin({
-  //   customClass: {
-  //     confirmButton: "btn btn-success",
-  //     cancelButton: "btn btn-danger"
-  //   },
-  //   buttonsStyling: false
-  // });
-  // swalWithBootstrapButtons.fire({
-  //   title: "Are you sure?",
-  //   text: "You won't be able to revert this!",
-  //   icon: "warning",
-  //   showCancelButton: true,
-  //   confirmButtonText: "Yes, delete it!",
-  //   cancelButtonText: "No, cancel!",
-  //   reverseButtons: true
-  // }).then((result) => {
-  //   if (result.isConfirmed) {
-  //     swalWithBootstrapButtons.fire({
-  //       title: "Deleted!",
-  //       text: "Your file has been deleted.",
-  //       icon: "success"
-  //     });
-  //   } else if (
-  //     /* Read more about handling dismissals below */
-  //     result.dismiss === Swal.DismissReason.cancel
-  //   ) {
-  //     swalWithBootstrapButtons.fire({
-  //       title: "Cancelled",
-  //       text: "Your imaginary file is safe :)",
-  //       icon: "error"
-  //     });
-  //   }
-  // });
-    product.splice(i,1);
-    localStorage.pro = JSON.stringify(product);
-    shoData();
-    // alert('met2aked si nami')
+   const swalWithBootstrapButtons = Swal.mixin({
+     customClass: {
+       confirmButton: "btn btn-success",
+       cancelButton: "btn btn-danger"
+     },
+     buttonsStyling: false
+   });
+   swalWithBootstrapButtons.fire({
+     title: "Are you sure?",
+     text: "You won't be able to revert this!",
+     icon: "warning",
+     showCancelButton: true,
+     confirmButtonText: "Yes, delete it!",
+     cancelButtonText: "No, cancel!",
+     reverseButtons: true
+   }).then((result) => {
+     if (result.isConfirmed) {
+       product.splice(i,1);
+       localStorage.pro = JSON.stringify(product);
+       shoData();
+       swalWithBootstrapButtons.fire({
+         title: "Deleted!",
+         text: "Your file has been deleted.",
+         icon: "success"
+       });
+     } else if (
+       /* Read more about handling dismissals below */
+       result.dismiss === Swal.DismissReason.cancel
+     ) {
+       swalWithBootstrapButtons.fire({
+         title: "Cancelled",
+         text: "Your imaginary file is safe :)",
+         icon: "error"
+       });
+     }
+   });
     // Swal.fire("met2akid si nami");
+    // alert('met2aked si nami')
     // Swal.fire({
     //   icon: "error",
     //   title: "Oops...",
@@ -296,18 +304,19 @@ function recherch(e){
 }
 // Calcule Toutal
 
- let localObject = JSON.parse(localStorage.pro); 
- let prixTot = 0;
- for(let i = 0; i < product.length ; i++){
-   prixTot = prixTot + +localObject[i].prix;
- };
+  let localObject = JSON.parse(localStorage.pro); 
+  let prixTot = 0;
+  for(let i = 0; i < product.length ; i++){
+    prixTot = prixTot + +localObject[i].prix;
+  };
 
- let localObjectFour = JSON.parse(localStorage.proFor); 
- let prixTotFour = 0;
- for(let i = 0; i < productFor.length ; i++){
-   prixTotFour = prixTotFour + +localObjectFour[i].crediFournisseur;
- };
+  let localObjectFour = JSON.parse(localStorage.proFor); 
+  let prixTotFour = 0;
+  for(let i = 0; i < productFor.length ; i++){
+    prixTotFour = prixTotFour + +localObjectFour[i].crediFournisseur;
+  };
 
+// let arry = [prixTot,prixTotFour,920,300,600, 700];
 let arry = [prixTot,prixTotFour,920,300,600, 700];
 const ctxn = document.getElementById('myChart');
 
@@ -376,6 +385,7 @@ const ctxcn = document.getElementById('myChart2');
       counter: 0,
       tabl: [5, 'fg', 524],
       tem: new Date(),
+
       
     },
     methods: {
@@ -394,6 +404,11 @@ const ctxcn = document.getElementById('myChart2');
           n += +productFor[i].crediFournisseur
         }
         return n
+      },
+      somT: function(){
+        let nbt = 0;
+        nbt = product.length
+        return nbt
       }
     }
   });
