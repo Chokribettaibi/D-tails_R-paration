@@ -16,6 +16,47 @@ let tfbody = document.getElementById('tfbody');
 let mood = 'create';
 let tmp;
 let nmbA = document.getElementById('nmbA');
+let boxx = document.querySelectorAll('.boxx')
+let boxTwe = document.getElementById('boxTwe');
+let afficheurAff = document.getElementById('afficheurAff');
+let dashboard = document.getElementById('dashboard');
+let boxThree = document.getElementById('boxThree');
+let boxFore = document.getElementById('boxFore')
+
+console.log(boxThree);
+// afficheurAff.onclick = affActiv();
+document.addEventListener("click", function(e){
+    console.log(e.target.id)
+    if(e.target.id === "afficheurAff") {
+        boxOne.className = "boxx"
+        boxTwe.className = "active";
+        boxThree.className = "boxx";
+        boxFore.className = "boxx"
+    } else if(e.target.id === "foraff") {
+        boxOne.className = "boxx"
+        boxTwe.className = "boxx"
+        boxThree.className = "active";
+        boxFore.className = "boxx"
+    } else if (e.target.id === "dashboard") {
+        boxOne.className = "active"
+        boxTwe.className = "boxx"
+        boxThree.className = "boxx";
+        boxFore.className = "boxx"
+    } else if (e.target.id === "commend") {
+        boxOne.className = "boxx"
+        boxTwe.className = "boxx"
+        boxThree.className = "boxx";
+        boxFore.className = "active"
+    }
+    }
+)
+
+// function affActiv(){
+//     for(let i=0;i<=2;i++){
+//         boxx.item(i).classList.toggle('active');
+//     }
+//     console.log('hello')
+// }
 
 // Create Data
 let product;
@@ -116,8 +157,8 @@ function shoData() {
             <td>${product[i].panne}</td>
             <td>${product[i].avence}</td>
             <td>${product[i].prix}</td>
-            <td><button class="btn btn-outline-primary" onclick="updateData(${i})">Update</button></td>
-            <td><button class="btn btn-outline-danger" onclick="deletData(${i})">Delete</button></td>
+            <td><button class="btn btn-outline-primary" onclick="updateData(${i})"><i class="bi bi-arrow-counterclockwise"></i></button></td>
+            <td><button class="btn btn-outline-danger" onclick="deletData(${i})"><i class="bi bi-trash3-fill"></i></button></td>
         </tr>
         `;
     }
@@ -134,7 +175,7 @@ function shoDataFor() {
         <tr>
             <td>${productFor[i].nameFournisseur}</td>
             <td>${productFor[i].crediFournisseur}</td>
-            <td><button class="btn btn-outline-danger" onclick="deletDataFour(${i})">Delete</button></td>
+            <td><button class="btn btn-outline-danger" onclick="deletDataFour(${i})"><i class="bi bi-trash3-fill"></i></button></td>
         </tr>
         `;
     }
