@@ -1,20 +1,16 @@
-.ajoute-fournisser{
+html {
+    scroll-behavior: smooth;
+}
+/* .ajoute-fournisser{
   background-color: #c8cddb;
   border-radius: 20px;
+} */
+.boxx.active {
+  display: block;
 }
-.static{
-    /* width: 50%;
-    height: 50%; */
-    /* display: flex; */
-    /* justify-content: center; */
-    /* position: relative; */
-    /* align-items: center; */
-    /* border: 2px solid blue;
-    position: absolute;
-    left: calc(100% - 40%);
-    top: 50%; */
-
-}
+.boxx {
+  display: none;
+};
 /* #myChart {
     width: 20%;
     height: 50%;
