@@ -23,7 +23,6 @@ let dashboard = document.getElementById('dashboard');
 let boxThree = document.getElementById('boxThree');
 let boxFore = document.getElementById('boxFore')
 
-console.log(boxThree);
 // afficheurAff.onclick = affActiv();
 document.addEventListener("click", function(e){
     console.log(e.target.id)
