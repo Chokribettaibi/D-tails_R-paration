@@ -32,22 +32,7 @@
             data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <input onkeyup="recherch(this.value)" class="form-control form-control-dark " id="search" type="text"
-            placeholder="Search" aria-label="Search" />
-
-        <ul class="navbar-nav px-3">
-            <li class="nav-item text-nowrap">
-                <button onclick="getSearchMode(this.id)" class="btn btn-outline-primary" id="btnSearchName">
-                    <i class="bi bi-person-raised-hand"></i>
-                </button>
-                <button onclick="getSearchMode(this.id)" class="btn btn-outline-primary" id="btnSearchNumero">
-                    <i class="bi bi-whatsapp"></i>
-                </button>
-                <button onclick="getSearchMode(this.id)" class="btn btn-outline-primary" id="btnSearchAppareil">
-                    <i class="bi bi-phone"></i>
-                </button>
-            </li>
-        </ul>
+        
     </nav>
 
     <div class="container-fluid">
@@ -130,7 +115,7 @@
             </nav>
 
             <div class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-                <div id="boxOne" class="boxx">
+                <div id="boxOne" class="active">
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                         <h1 class="h2"><i class="bi bi-wrench"></i> <span class="text-primary">D</span>étails Réparation
                         </h1>
@@ -259,7 +244,47 @@
                         </div>
                         <!-- End Statstique -->
     
-                        <h2><span class="text-primary">L</span>iste <span class="text-primary">C</span>lien</h2>
+                        <div class="row">
+                            <div class="col">
+                                <h2><span class="text-primary">L</span>iste <span class="text-primary">C</span>lien</h2>
+                            </div>
+                            <div class="col">
+                                <!-- Start Recherche -->
+                                 <div class="contentSerche col">
+                                    <div class="row">
+                                        <div class="col-5">
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="bi bi-search"></i>
+                                                </div>
+                                                <input onkeyup="recherch(this.value)" class="form-control form-control-dark " id="search" type="text"
+                                                placeholder="Search" aria-label="Search" />
+                                            </div>
+                                        </div>
+                                        <div class="col-1">
+                                            <button onclick="getSearchMode(this.id)" class="btn btn-outline-primary" id="btnSearchName">
+                                                <i class="bi bi-person-raised-hand"></i>
+                                            </button>
+
+                                        </div>
+                                        <div class="col-1">
+                                            <button onclick="getSearchMode(this.id)" class="btn btn-outline-primary" id="btnSearchNumero">
+                                                <i class="bi bi-whatsapp"></i>
+                                            </button>
+
+                                        </div>
+                                        <div class="col-1">
+                                            <button onclick="getSearchMode(this.id)" class="btn btn-outline-primary" id="btnSearchAppareil">
+                                                <i class="bi bi-phone"></i>
+                                            </button>
+
+                                        </div>
+                                    </div>
+                                 </div>
+                                <!-- End Recherche -->
+
+                            </div>
+                        </div>
                         <div class="table-responsive">
                             <table class="table text-center table-striped table-sm">
                                 <thead>
@@ -281,7 +306,7 @@
                     </div>
                 </div>
 
-                <div id="boxTwe" class="active">
+                <div id="boxTwe" class="boxx">
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                         <h1 class="h2"><i class="bi bi-tv"></i> Détails Afficheur
                         </h1>
@@ -297,8 +322,16 @@
                         </div>
                     </div>
                     <div id="detaiAfficheur">
-                        <div class="box2">
-                            <h5>Prix Aficheur</h5>
+                        <h3><span class="text-primary">R</span>éception Afficheur</h3>
+                        <form action="">
+                            <input type="text" name="" id="" placeholder="Model">
+                            <input type="text" name="" id="" placeholder="Fornisseur">
+                            <input type="text" name="" id="" placeholder="prix">
+                            <br>
+                            <button class="btn btn-outline-primary">recption</button>
+                        </form>
+                        <div class="box2 m-2">
+                            <h6>Prix Aficheur</h6>
                             <!-- Start Colapss -->
                             <!-- End Colapss -->
                             <table class="table text-center table-striped">
@@ -306,14 +339,14 @@
                                     <tr>
                                         <th>Model</th>
                                         <th>Prix Client</th>
-                                        <th>Akrem</th>
+                                        <th class="ak"><span></span>Akrem</th>
                                         <th>Haythem</th>
                                         <th>Aymen</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td colspan="1">Samsung</td>
+                                        <td class="text-primary" colspan="5">Samsung</td>
                                     </tr>
                                     <tr>
                                         <td colspan="1">Sére A</td>
@@ -449,7 +482,7 @@
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td colspan="1">Huawei</td>
+                                        <td class="text-primary" colspan="5">Huawei</td>
                                     </tr>
                                     <tr>
                                         <td>Y5 lit</td>
@@ -457,7 +490,7 @@
                                         <td>50</td>
                                     </tr>
                                     <tr>
-                                        <td colspan="1">Infinix</td>
+                                        <td class="text-primary" colspan="5">Infinix</td>
                                     </tr>
                                     <tr>
                                         <td>Smart 4</td>
@@ -506,18 +539,99 @@
                                         <td></td>
                                         <td>55</td>
                                         <td></td>
+                                        <td></td>
                                     </tr>
                                     <tr>
                                         <td>Hot 9</td>
                                     </tr>
                                     <tr>
-                                        <td colspan="1">Oppo</td>
+                                        <td class="text-primary" colspan="5">Oppo</td>
                                     </tr>
                                     <tr>
-                                        <td colspan="1">Nokia</td>
+                                        <td class="text-primary" colspan="5">Redmi</td>
                                     </tr>
                                     <tr>
-                                        <td colspan="1">Tecno</td>
+                                        <td>A1+ A2+</td>
+                                        <td>110_95</td>
+                                        <td>55</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>10C</td>
+                                        <td>100_90</td>
+                                        <td>50</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>9A 9C</td>
+                                        <td>100_90</td>
+                                        <td>50</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-primary" colspan="5">Nokia</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-primary" colspan="5">Tecno</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="box2">
+                            <h6>Modèles Infinix (2018-2024)</h6>
+                            <table class="table text-center table-striped table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Année</th>
+                                        <th>Modèles</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2018</td>
+                                        <td>
+                                            Infinix Hot 6, Infinix Hot 6 Pro, Infinix Hot S3, Infinix Zero 5, Infinix Zero 5 Pro, Infinix Note 5, Infinix Note 5 Stylus, Infinix S3X
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2019</td>
+                                        <td>
+                                            Infinix Hot 7, Infinix Hot 7 Pro, Infinix S4, Infinix Smart 3, Infinix Smart 3 Plus, Infinix Zero 6, Infinix Zero 6 Pro, Infinix Note 6
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020</td>
+                                        <td>
+                                            Infinix Hot 9, Infinix Hot 9 Pro, Infinix Note 7, Infinix Note 7 Lite, Infinix S5, Infinix S5 Pro, Infinix Zero 8, Infinix Zero 8i, Infinix Smart 4, Infinix Smart 4 Plus
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2021</td>
+                                        <td>
+                                            Infinix Hot 10, Infinix Hot 10 Play, Infinix Hot 10T, Infinix Note 10, Infinix Note 10 Pro, Infinix Zero X, Infinix Zero X Pro, Infinix Zero X Neo, Infinix Smart 5, Infinix Smart 5 Pro, Infinix Smart 6
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2022</td>
+                                        <td>
+                                            Infinix Hot 11, Infinix Hot 11S, Infinix Hot 11 Play, Infinix Note 11, Infinix Note 11 Pro, Infinix Note 11S, Infinix Zero Ultra, Infinix Zero 5G, Infinix Smart 6 Plus, Infinix Smart 6 HD
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023</td>
+                                        <td>
+                                            Infinix Hot 30, Infinix Hot 30i, Infinix Hot 30 Play, Infinix Note 30, Infinix Note 30 Pro, Infinix Note 30 VIP, Infinix Zero 30 5G, Infinix GT 10 Pro, Infinix Smart 7, Infinix Smart 7 Plus
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2024</td>
+                                        <td>
+                                            Infinix Hot 40, Infinix Hot 40 Pro, Infinix Hot 40i, Infinix Note 40, Infinix Note 40 Pro, Infinix Zero 40, Infinix Smart 8, Infinix Smart 8 Plus
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -704,61 +818,6 @@
                                     <tr>
                                         <td>Autres</td>
                                         <td>XCover 8, Tab S10 (attendus)</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="box2">
-                            <h6>Modèles Infinix (2018-2024)</h6>
-                            <table class="table text-center table-striped table-sm">
-                                <thead>
-                                    <tr>
-                                        <th>Année</th>
-                                        <th>Modèles</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>2018</td>
-                                        <td>
-                                            Infinix Hot 6, Infinix Hot 6 Pro, Infinix Hot S3, Infinix Zero 5, Infinix Zero 5 Pro, Infinix Note 5, Infinix Note 5 Stylus, Infinix S3X
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2019</td>
-                                        <td>
-                                            Infinix Hot 7, Infinix Hot 7 Pro, Infinix S4, Infinix Smart 3, Infinix Smart 3 Plus, Infinix Zero 6, Infinix Zero 6 Pro, Infinix Note 6
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2020</td>
-                                        <td>
-                                            Infinix Hot 9, Infinix Hot 9 Pro, Infinix Note 7, Infinix Note 7 Lite, Infinix S5, Infinix S5 Pro, Infinix Zero 8, Infinix Zero 8i, Infinix Smart 4, Infinix Smart 4 Plus
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2021</td>
-                                        <td>
-                                            Infinix Hot 10, Infinix Hot 10 Play, Infinix Hot 10T, Infinix Note 10, Infinix Note 10 Pro, Infinix Zero X, Infinix Zero X Pro, Infinix Zero X Neo, Infinix Smart 5, Infinix Smart 5 Pro, Infinix Smart 6
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2022</td>
-                                        <td>
-                                            Infinix Hot 11, Infinix Hot 11S, Infinix Hot 11 Play, Infinix Note 11, Infinix Note 11 Pro, Infinix Note 11S, Infinix Zero Ultra, Infinix Zero 5G, Infinix Smart 6 Plus, Infinix Smart 6 HD
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2023</td>
-                                        <td>
-                                            Infinix Hot 30, Infinix Hot 30i, Infinix Hot 30 Play, Infinix Note 30, Infinix Note 30 Pro, Infinix Note 30 VIP, Infinix Zero 30 5G, Infinix GT 10 Pro, Infinix Smart 7, Infinix Smart 7 Plus
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2024</td>
-                                        <td>
-                                            Infinix Hot 40, Infinix Hot 40 Pro, Infinix Hot 40i, Infinix Note 40, Infinix Note 40 Pro, Infinix Zero 40, Infinix Smart 8, Infinix Smart 8 Plus
-                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
