@@ -23,17 +23,34 @@ html {
 #boxTwe{
   color: red;
 }
-.box2 {
-  display: inline-block;
-  width: 400px;
-  /* border: 2px solid red; */
-  border-radius: 20px;
-  padding: 20px;
+.box1 {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 60% 20% 20%;
 }
-.box2 h5,
+.box2 {
+  padding-top:100px ;
+  display: inline-block;
+  /* width: 400px; */
+  height: 600px;
+  /* border: 2px solid red; */
+  /* border-radius: 20px; */
+  padding: 20px;
+  overflow: scroll;
+  /* box-shadow: 10px 10px 2px #0d6efd; */
+}
 .box2 h6 {
   color: #0d6efd;
+  background-color: #000;
+  /* position: fixed; */
+  display: none;
 }
+.box2 table thead {
+  /* width: 100%; */
+  /* position: fixed; */
+  /* background-color: #0d6dfd; */
+}
+
 
 /* #myChart {
     width: 20%;
