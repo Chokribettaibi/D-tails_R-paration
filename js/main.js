@@ -4,6 +4,7 @@ let appareil = document.getElementById('appareil');
 let panne = document.getElementById('panne');
 let avence = document.getElementById('avence');
 let prix = document.getElementById('prix');
+let position = document.getElementById('position');
 let rend = document.getElementById('rend');
 let btnRecevoir = document.getElementById('btnRecevoir');
 let tcbody = document.getElementById('tcbody');
@@ -25,7 +26,6 @@ let boxFore = document.getElementById('boxFore')
 
 // afficheurAff.onclick = affActiv();
 document.addEventListener("click", function(e){
-    console.log(e.target.id)
     if(e.target.id === "afficheurAff") {
         boxOne.className = "boxx"
         boxTwe.className = "active";
@@ -74,14 +74,13 @@ function red() {
         panne: panne.value.toLocaleLowerCase(),
         avence: avence.value,
         prix: prix.value,
-        rend: rend.value,
+        position: position.value,
         dateResption: new Date(),
     };
     scroll({
         top: 100000,
         behavior: 'smooth',
     });
-    console.log(mood);
     if (mood === 'create') {
         product.push(newPro);
         localStorage.setItem('pro', JSON.stringify(product));
@@ -93,6 +92,7 @@ function red() {
     shoDataFor();
     shoData();
     clearData();
+    console.log(localStorage.pro);
 }
 
 // Create Fournisseur
@@ -156,7 +156,8 @@ function shoData() {
             <td>${product[i].panne}</td>
             <td>${product[i].avence}</td>
             <td>${product[i].prix}</td>
-            <td><button class="btn btn-outline-primary" onclick="updateData(${i})"><i class="bi bi-arrow-counterclockwise"></i></button></td>
+            <td>${product[i].position}</td>
+            <td><button class="btn btn-outline-primary" onclick="updateData(${i})"><i class="bi bi-arrow-repeat"></i></button></td>
             <td><button class="btn btn-outline-danger" onclick="deletData(${i})"><i class="bi bi-trash3-fill"></i></button></td>
         </tr>
         `;
@@ -191,6 +192,7 @@ function updateData(i) {
     panne.value = product[i].panne;
     avence.value = product[i].avence;
     prix.value = product[i].prix;
+    position.value = product[i].position;
     mood = 'update';
     tmp = i;
     btnRecevoir.innerHTML = 'Update';
@@ -283,6 +285,7 @@ function recherch(e) {
                     <td>${product[i].panne}</td>
                     <td>${product[i].avence}</td>
                     <td>${product[i].prix}</td>
+                    <td>${product[i].position}</td>
                     <td class="text-primary">En attente</td>
                     <td><button class="btn btn-outline-danger" onclick="deletData(${i})">Delete</button></td>
                 </tr>
@@ -301,6 +304,7 @@ function recherch(e) {
                     <td>${product[i].panne}</td>
                     <td>${product[i].avence}</td>
                     <td>${product[i].prix}</td>
+                    <td>${product[i].position}</td>
                     <td class="text-primary">En attente</td>
                     <td><button class="btn btn-outline-danger" onclick="deletData(${i})">Delete</button></td>
                 </tr>
@@ -319,6 +323,7 @@ function recherch(e) {
                     <td>${product[i].panne}</td>
                     <td>${product[i].avence}</td>
                     <td>${product[i].prix}</td>
+                    <td>${product[i].position}</td>
                     <td class="text-primary">En attente</td>
                     <td><button class="btn btn-outline-danger" onclick="deletData(${i})">Delete</button></td>
                 </tr>

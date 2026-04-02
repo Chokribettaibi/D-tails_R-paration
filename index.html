@@ -1,16 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="" />
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
     <meta name="generator" content="Hugo 0.72.0" />
     <title>Potentat Pro</title>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    />
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="css/all.css" />
@@ -19,940 +24,1247 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css" />
-</head>
+  </head>
 
-<body>
-    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-        <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">Potentat Pro</a>
-        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse"
-            data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+  <body>
+    <nav
+      class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow"
+    >
+    <div class="row">
+      <div class="col-8 d-flex justify-content-start">
+        <a class="navbar-brand text-start col-md-3 col-lg-2 m-0 px-3" href="#"
+          >Potentat Pro</a
+        >
+      </div>
+      <div class="col-3 d-flex justify-content-end">
+        <button
+          class="navbar-toggler position-absolute d-md-none collapsed"
+          type="button"
+          data-toggle="collapse"
+          data-target="#sidebarMenu"
+          aria-controls="sidebarMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
-        
+
+      </div>
+    </div>
+      
     </nav>
 
     <div class="container-fluid">
-        <div class="row">
-            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-                <div class="position-sticky pt-3">
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="dashboard"  aria-current="page" href="#">
-                                <span data-feather="home"></span>
-                                Dashboard
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="afficheurAff" href="#boxOne">
-                                <span data-feather="file"></span>
-                                Afficheur
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fournisseur" id="foraff" href="#">
-                                <span data-feather="shopping-cart"></span>
-                                Fournisseur
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="commend" href="#">
-                                <span data-feather="users"></span>
-                                Commende
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="bar-chart-2"></span>
-                                Carte maire
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="layers"></span>
-                                Autre...
-                            </a>
-                        </li>
-                    </ul>
+      <div class="row">
+        <nav
+          id="sidebarMenu"
+          class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse"
+        >
+          <div class="position-sticky pt-3">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  id="dashboard"
+                  aria-current="page"
+                  href="#"
+                >
+                  <span data-feather="home"></span>
+                  Dashboard
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="afficheurAff" href="#boxOne">
+                  <span data-feather="file"></span>
+                  Afficheur
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fournisseur" id="foraff" href="#">
+                  <span data-feather="shopping-cart"></span>
+                  Fournisseur
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="commend" href="#">
+                  <span data-feather="users"></span>
+                  Commende
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="bar-chart-2"></span>
+                  Carte maire
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="layers"></span>
+                  Autre...
+                </a>
+              </li>
+            </ul>
 
-                    <h6
-                        class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                        <span>Fornisseur</span>
-                        <a class="link-secondary"  href="#" aria-label="Add a new report">
-                            <span data-feather="plus-circle"></span>
-                        </a>
-                    </h6>
-                    <ul class="nav flex-column mb-2">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file-text"></span>
-                                Haithem
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file-text"></span>
-                                Akrem
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file-text"></span>
-                                Samir
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file-text"></span>
-                                Autre...
-                            </a>
-                        </li>
-                    </ul>
+            <h6
+              class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted"
+            >
+              <span>Fornisseur</span>
+              <a class="link-secondary" href="#" aria-label="Add a new report">
+                <span data-feather="plus-circle"></span>
+              </a>
+            </h6>
+            <ul class="nav flex-column mb-2">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="file-text"></span>
+                  Haithem
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="file-text"></span>
+                  Akrem
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="file-text"></span>
+                  Samir
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="file-text"></span>
+                  Autre...
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+          <div id="boxOne" class="active">
+            <div
+              class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+            >
+              <h1 class="h2">
+                <i class="bi bi-wrench"></i>
+                <span class="text-primary">D</span>étails Réparation
+              </h1>
+              <div class="btn-toolbar mb-2 mb-md-0">
+                <div class="btn-group mr-2">
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-outline-secondary"
+                  >
+                    Share
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-outline-secondary"
+                  >
+                    Export
+                  </button>
                 </div>
-            </nav>
-
-            <div class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-                <div id="boxOne" class="active">
-                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                        <h1 class="h2"><i class="bi bi-wrench"></i> <span class="text-primary">D</span>étails Réparation
-                        </h1>
-                        <div class="btn-toolbar mb-2 mb-md-0">
-                            <div class="btn-group mr-2">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-                            </div>
-                            <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                                <span data-feather="calendar"></span>
-                                This week
-                            </button>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <!-- Start Ajouter Client -->
-                        <div class="ajouteClient p-4">
-                            <div class="row">
-                                <div class="col">
-                                    <h3><span class="text-primary">R</span>éception un appareil</h3>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <form class="text-primary bg-yellow p-2 border-bottom border-primary">
-                                    <div class="row">
-                                        <div class="col">
-                                            <label class="visually-hidden" for="nomeClient">Nome Client</label>
-                                            <input type="text" class="form-control" id="nomeClient"
-                                                placeholder="Jane Doe" />
-                                        </div>
-                                        <div class="col">
-                                            <label class="visually-hidden" for="appareil">Appareil</label>
-                                            <div class="input-group">
-                                                <div class="input-group-text"><i class="bi bi-phone"></i></div>
-                                                <input type="text" class="form-control" id="appareil"
-                                                    placeholder="Samsung S20 Ult" />
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <label class="visually-hidden" for="numeroTélèphone">Numero télèphone</label>
-                                            <div class="input-group">
-                                                <div class="input-group-text"><i class="bi bi-telephone-plus"></i></div>
-                                                <input type="number" class="form-control" id="numeroTélèphone"
-                                                    placeholder="+216 98 765 432" />
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <label class="visually-hidden" for="panne">Panne</label>
-                                            <select class="form-select form-control" id="panne">
-                                                <option selected>Pane...</option>
-                                                <option value="Afficheur">Afficheur</option>
-                                                <option value="Concteur">Concteur</option>
-                                                <option value="Micro">Micro</option>
-                                                <option value="Frp">Frp</option>
-                                                <option value="Flashe">Flashe</option>
-                                                <option value="6">Autr...</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            <label class="visually-hidden" for="avence">Avence</label>
-                                            <div class="input-group">
-                                                <div class="input-group-text"><i class="bi bi-currency-dollar"></i></div>
-                                                <input type="number" class="form-control" id="avence"
-                                                    placeholder="120 DTN" />
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <label class="visually-hidden" for="prix">Prix</label>
-                                            <div class="input-group">
-                                                <div class="input-group-text"><i class="bi bi-currency-dollar"></i></div>
-                                                <input type="number" class="form-control" id="prix" placeholder="120 DTN" />
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <label class="visually-hidden" for="rend">Rendez-vous</label>
-                                            <div class="input-group">
-                                                <div class="input-group-text"><i class="bi bi-calendar-date"></i></div>
-                                                <input type="date" class="form-control" id="rend" />
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <label class="visually-hidden" for="rentabilité">Rentabilité</label>
-                                            <div class="input-group">
-                                                <div class="input-group-text"><i class="bi bi-currency-dollar"></i></div>
-                                                <input type="number" class="form-control" id="rentabilité"
-                                                    placeholder="+ 00.00 dt" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row p-4">
-                                        <div class="col">
-                                            <button onclick="red()" id="btnRecevoir" class="btn btn-primary">
-                                                <i class="bi bi-database-fill-add"></i> recevoir
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <!-- End Ajouter Client -->
-    
-                        <!-- Start Statstique -->
-                        <div class="static ali p-2">
-                            <div class="container">
-                                <h3>Statstique <i class="bi bi-graph-up-arrow"></i></h3>
-                                <div class="row align-items-center">
-                                    <div class="col-4">
-                                        <canvas id="myChart"></canvas>
-                                    </div>
-                                    <div class="col-4">
-                                        <canvas id="myChart2"></canvas>
-                                    </div>
-                                    <div class="col-4 p-4">
-                                        <div id="myApp">
-                                            <h3 class="text-danger">rapport</h3>
-                                            <p class="text-primary">Prix toutal {{ som() }}</p>
-                                            <p>number appareil {{ somT() }}</p>
-                                            <p>cridi toutal {{ somF() }}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <!-- End Statstique -->
-    
-                        <div class="row">
-                            <div class="col">
-                                <h2><span class="text-primary">L</span>iste <span class="text-primary">C</span>lien</h2>
-                            </div>
-                            <div class="col">
-                                <!-- Start Recherche -->
-                                 <div class="contentSerche col">
-                                    <div class="row">
-                                        <div class="col-5">
-                                            <div class="input-group">
-                                                <div class="input-group-text">
-                                                    <i class="bi bi-search"></i>
-                                                </div>
-                                                <input onkeyup="recherch(this.value)" class="form-control form-control-dark " id="search" type="text"
-                                                placeholder="Search" aria-label="Search" />
-                                            </div>
-                                        </div>
-                                        <div class="col-1">
-                                            <button onclick="getSearchMode(this.id)" class="btn btn-outline-primary" id="btnSearchName">
-                                                <i class="bi bi-person-raised-hand"></i>
-                                            </button>
-
-                                        </div>
-                                        <div class="col-1">
-                                            <button onclick="getSearchMode(this.id)" class="btn btn-outline-primary" id="btnSearchNumero">
-                                                <i class="bi bi-whatsapp"></i>
-                                            </button>
-
-                                        </div>
-                                        <div class="col-1">
-                                            <button onclick="getSearchMode(this.id)" class="btn btn-outline-primary" id="btnSearchAppareil">
-                                                <i class="bi bi-phone"></i>
-                                            </button>
-
-                                        </div>
-                                    </div>
-                                 </div>
-                                <!-- End Recherche -->
-
-                            </div>
-                        </div>
-                        <div class="table-responsive">
-                            <table class="table text-center table-striped table-sm">
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Nome Clien | <i class="bi bi-person"></i></th>
-                                        <th>Apparer | <i class="bi bi-phone"></i></th>
-                                        <th>Numero télèphone | <i class="bi bi-whatsapp"></i></th>
-                                        <th>Panne | <i class="fa-solid fa-triangle-exclamation"></i></th>
-                                        <th>Avence | <i class="fa-solid fa-hand-holding-dollar"></i></th>
-                                        <th>Prix | <i class="bi bi-currency-dollar"></i></th>
-                                        <th>Statu</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody id="tcbody"></tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="boxTwe" class="boxx">
-                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                        <h1 class="h2"><i class="bi bi-tv"></i> Détails Afficheur
-                        </h1>
-                        <div class="btn-toolbar mb-2 mb-md-0">
-                            <div class="btn-group mr-2">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-                            </div>
-                            <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                                <span data-feather="calendar"></span>
-                                This week
-                            </button>
-                        </div>
-                    </div>
-                    <div id="detaiAfficheur">
-                        <h3><span class="text-primary">R</span>éception Afficheur</h3>
-                        <form action="">
-                            <input type="text" name="" id="" placeholder="Model">
-                            <input type="text" name="" id="" placeholder="Fornisseur">
-                            <input type="text" name="" id="" placeholder="prix">
-                            <br>
-                            <button class="btn btn-outline-primary">recption</button>
-                        </form>
-                        <div class="box1">
-                            <div class="box2">
-                                <h6>Prix Aficheur</h6>
-                                <!-- Start Colapss -->
-                                <!-- End Colapss -->
-                                <table class="table text-center table-striped">
-                                    <thead>
-                                        <tr>
-                                            <th>Model</th>
-                                            <th>Prix Client</th>
-                                            <th>Akrem</th>
-                                            <th>Haythem</th>
-                                            <th>Aymen</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="text-white text-capitalize fs-6 fw-bolde bg-primary " colspan="5">samsung</td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="1">Sére A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>A01</td>
-                                            <td></td>
-                                            <td>55</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>A10</td>
-                                            <td>100_80</td>
-                                            <td>50 </td>
-                                            <td>..</td>
-                                            <td>45</td>
-                                        </tr>
-                                        <tr>
-                                            <td>A10s</td>
-                                            <td>100_80</td>
-                                            <td>50 </td>
-                                            <td>..</td>
-                                            <td>45</td>
-                                        </tr>
-                                        <tr>
-                                            <td>A11</td>
-                                            <td>100_90</td>
-                                            <td>50</td>
-                                            <td></td>
-                                            <td>50</td>
-                                        </tr>
-                                        <tr>
-                                            <td>A12</td>
-                                            <td>100_90</td>
-                                            <td>50</td>
-                                            <td></td>
-                                            <td>55</td>
-                                        </tr>
-                                        <tr>
-                                            <td>A13</td>
-                                            <td>110_100</td>
-                                            <td>60</td>
-                                            <td></td>
-                                            <td>55</td>
-                                        </tr>
-                                        <tr>
-                                            <td>A14 (4G)</td>
-                                            <td>110_100</td>
-                                            <td>60</td>
-                                            <td></td>
-                                            <td>55</td>
-                                        </tr>
-                                        <tr>
-                                            <td>A14 (5G)</td>
-                                            <td>110_100</td>
-                                            <td>65</td>
-                                            <td></td>
-                                            <td>60</td>
-                                        </tr>
-                                        <tr>
-                                            <td>A15</td>
-                                            <td>140_130</td>
-                                            <td>100</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>A20</td>
-                                            <td>130_100</td>
-                                            <td>87</td>
-                                            <td></td>
-                                            <td>65</td>
-                                        </tr>
-                                        <tr>
-                                            <td>A21s</td>
-                                            <td>100_80</td>
-                                            <td>50</td>
-                                            <td></td>
-                                            <td>55</td>
-                                        </tr>
-                                        <tr>
-                                            <td>A30</td>
-                                            <td>130_120</td>
-                                            <td>87</td>
-                                            <td></td>
-                                            <td>70</td>
-                                        </tr>
-                                        <tr>
-                                            <td>A30s</td>
-                                            <td>130_120</td>
-                                            <td>87</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        
-                                        <tr>
-                                            <td>A31</td>
-                                            <td></td>
-                                            <td>88</td>
-                                            <td></td>
-                                            <td>80</td>
-                                        </tr>
-                                        <tr>
-                                            <td>A32</td>
-                                            <td></td>
-                                            <td>95</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>A50</td>
-                                            <td></td>
-                                            <td>87</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>A50s</td>
-                                            <td></td>
-                                            <td>87</td>
-                                            <td></td>
-                                            <td>70</td>
-                                        </tr>
-                                        <tr>
-                                            <td>A52</td>
-                                            <td></td>
-                                            <td>100</td>
-                                            <td></td>
-                                            <td>95</td>
-                                        </tr>
-                                        <tr>
-                                            <td>A70</td>
-                                            <td></td>
-                                            <td>135</td>
-                                            <td></td>
-                                            <td>85</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-white bg-primary" colspan="5">Huawei</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Y5 lit</td>
-                                            <td></td>
-                                            <td>50</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-white bg-primary" colspan="5">Infinix</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Smart 4</td>
-                                            <td>100_80</td>
-                                            <td>50</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Smart 5</td>
-                                            <td>100_80</td>
-                                            <td>50</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Smart 6</td>
-                                            <td>100_80</td>
-                                            <td>52</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Smart 6HD</td>
-                                            <td>105_85</td>
-                                            <td>52</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Smart 6+</td>
-                                            <td>100-85</td>
-                                            <td>55</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Smart 7</td>
-                                            <td>100_90</td>
-                                            <td>52</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Smart 8</td>
-                                            <td>110_100</td>
-                                            <td>55</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Smart 9</td>
-                                            <td>110_100</td>
-                                            <td>60</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Hot 10, Hot 10s, Hot 10 play</td>
-                                            <td>110_100</td>
-                                            <td>55</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Hot 10s</td>
-                                            <td>110_100</td>
-                                            <td>55</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Hot 10</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td class="text-white bg-primary" colspan="5">Oppo</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-white bg-primary" colspan="5">Redmi</td>
-                                        </tr>
-                                        <tr>
-                                            <td>A1+ A2+</td>
-                                            <td>110_95</td>
-                                            <td>55</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>10C</td>
-                                            <td>100_90</td>
-                                            <td>50</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>9A 9C</td>
-                                            <td>100_90</td>
-                                            <td>50</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-white bg-primary" colspan="5">Nokia</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-white bg-primary" colspan="5">Tecno</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-white bg-primary" colspan="5">Itel</td>
-                                        </tr>
-                                        <tr>
-                                            <td>A58</td>
-                                            <td>110</td>
-                                            <td></td>
-                                            <td>60</td>
-                                            <td></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            
-                            <div class="box2">
-                                <h6>Modèles Infinix (2018-2024)</h6>
-                                <table class="table text-center table-striped table-sm">
-                                    <thead>
-                                        <tr>
-                                            <th>Année</th>
-                                            <th>Modèles</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>2018</td>
-                                            <td>
-                                                Infinix Hot 6, Infinix Hot 6 Pro, Infinix Hot S3, Infinix Zero 5, Infinix Zero 5 Pro, Infinix Note 5, Infinix Note 5 Stylus, Infinix S3X
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2019</td>
-                                            <td>
-                                                Infinix Hot 7, Infinix Hot 7 Pro, Infinix S4, Infinix Smart 3, Infinix Smart 3 Plus, Infinix Zero 6, Infinix Zero 6 Pro, Infinix Note 6
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2020</td>
-                                            <td>
-                                                Infinix Hot 9, Infinix Hot 9 Pro, Infinix Note 7, Infinix Note 7 Lite, Infinix S5, Infinix S5 Pro, Infinix Zero 8, Infinix Zero 8i, Infinix Smart 4, Infinix Smart 4 Plus
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2021</td>
-                                            <td>
-                                                Infinix Hot 10, Infinix Hot 10 Play, Infinix Hot 10T, Infinix Note 10, Infinix Note 10 Pro, Infinix Zero X, Infinix Zero X Pro, Infinix Zero X Neo, Infinix Smart 5, Infinix Smart 5 Pro, Infinix Smart 6
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2022</td>
-                                            <td>
-                                                Infinix Hot 11, Infinix Hot 11S, Infinix Hot 11 Play, Infinix Note 11, Infinix Note 11 Pro, Infinix Note 11S, Infinix Zero Ultra, Infinix Zero 5G, Infinix Smart 6 Plus, Infinix Smart 6 HD
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2023</td>
-                                            <td>
-                                                Infinix Hot 30, Infinix Hot 30i, Infinix Hot 30 Play, Infinix Note 30, Infinix Note 30 Pro, Infinix Note 30 VIP, Infinix Zero 30 5G, Infinix GT 10 Pro, Infinix Smart 7, Infinix Smart 7 Plus
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2024</td>
-                                            <td>
-                                                Infinix Hot 40, Infinix Hot 40 Pro, Infinix Hot 40i, Infinix Note 40, Infinix Note 40 Pro, Infinix Zero 40, Infinix Smart 8, Infinix Smart 8 Plus
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="box2">
-                                <h6>Modèles Samsung 2018-2024 (Liste Complète)</h6>
-                                <table class="table text-center table-striped table-sm">
-                                    <thead>
-                                        <tr>
-                                            <th>Année</th>
-                                            <th>Série</th>
-                                            <th>Modèles</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <!-- 2018 -->
-                                        <tr>
-                                            <td rowspan="6">2018</td>
-                                            <td>Galaxy S</td>
-                                            <td>S9, S9+</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Galaxy Note</td>
-                                            <td>Note 9</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Galaxy A</td>
-                                            <td>A6, A6+, A7 (2018), A8 (2018), A8+ (2018), A9 (2018)</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Galaxy J</td>
-                                            <td>J4, J6, J8, J2 Pro (2018), J2 Core, J4+</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Galaxy M</td>
-                                            <td>M20, M30</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Autres</td>
-                                            <td>XCover 4, On6, On8 (2018), Tab A 10.5 (2018), Tab S4</td>
-                                        </tr>
-                                
-                                        <!-- 2019 -->
-                                        <tr>
-                                            <td rowspan="6">2019</td>
-                                            <td>Galaxy S</td>
-                                            <td>S10e, S10, S10+, S10 5G</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Galaxy Note</td>
-                                            <td>Note 10, Note 10+</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Galaxy A</td>
-                                            <td>A10, A20, A30, A40, A50, A60, A70, A80, A90 5G</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Galaxy M</td>
-                                            <td>M10, M20, M30, M40</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Galaxy Fold</td>
-                                            <td>Galaxy Fold (1ère génération)</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Autres</td>
-                                            <td>XCover 4s, Tab S5e, Tab S6</td>
-                                        </tr>
-                                
-                                        <!-- 2020 -->
-                                        <tr>
-                                            <td rowspan="6">2020</td>
-                                            <td>Galaxy S</td>
-                                            <td>S20, S20+, S20 Ultra</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Galaxy Note</td>
-                                            <td>Note 20, Note 20 Ultra</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Galaxy A</td>
-                                            <td>A01, A11, A21, A31, A41, A51, A71, A51 5G, A71 5G</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Galaxy M</td>
-                                            <td>M11, M21, M31, M51</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Galaxy Z</td>
-                                            <td>Z Flip, Z Fold 2</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Autres</td>
-                                            <td>XCover Pro, Tab A7, Tab S7, Tab S7+</td>
-                                        </tr>
-                                
-                                        <!-- 2021 -->
-                                        <tr>
-                                            <td rowspan="6">2021</td>
-                                            <td>Galaxy S</td>
-                                            <td>S21, S21+, S21 Ultra</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Galaxy Note</td>
-                                            <td>Aucun (série mise en pause)</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Galaxy A</td>
-                                            <td>A02, A12, A22, A32, A52, A72</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Galaxy M</td>
-                                            <td>M12, M22, M32, M42, M52, M62</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Galaxy Z</td>
-                                            <td>Z Flip 3, Z Fold 3</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Autres</td>
-                                            <td>XCover 5, Tab A7 Lite, Tab S7 FE, Tab S8 (annoncé fin 2021)</td>
-                                        </tr>
-                                
-                                        <!-- 2022 -->
-                                        <tr>
-                                            <td rowspan="6">2022</td>
-                                            <td>Galaxy S</td>
-                                            <td>S22, S22+, S22 Ultra</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Galaxy A</td>
-                                            <td>A03, A13, A23, A33, A53, A73</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Galaxy M</td>
-                                            <td>M13, M23, M33, M53</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Galaxy Z</td>
-                                            <td>Z Flip 4, Z Fold 4</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Autres</td>
-                                            <td>XCover 6 Pro, Tab A8, Tab S8, Tab S8+, Tab S8 Ultra</td>
-                                        </tr>
-                                
-                                        <!-- 2023 -->
-                                        <tr>
-                                            <td rowspan="6">2023</td>
-                                            <td>Galaxy S</td>
-                                            <td>S23, S23+, S23 Ultra</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Galaxy A</td>
-                                            <td>A14, A24, A34, A54</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Galaxy M</td>
-                                            <td>M14, M34, M54</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Galaxy Z</td>
-                                            <td>Z Flip 5, Z Fold 5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Autres</td>
-                                            <td>XCover 7, Tab S9, Tab S9+, Tab S9 Ultra</td>
-                                        </tr>
-                                
-                                        <!-- 2024 -->
-                                        <tr>
-                                            <td rowspan="6">2024</td>
-                                            <td>Galaxy S</td>
-                                            <td>S24, S24+, S24 Ultra (attendus)</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Galaxy A</td>
-                                            <td>A15, A25, A35, A55 (attendus)</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Galaxy Z</td>
-                                            <td>Z Flip 6, Z Fold 6 (attendus)</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Autres</td>
-                                            <td>XCover 8, Tab S10 (attendus)</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                
-                <div id="boxThree" class="boxx">
-                    <div class="container">
-                            <h4 class="pt-4">Ajouter Fournisseur</h4>
-                            <div class="form-group">
-                                <div class="row">
-                                    <div class="col">
-                                        <label for="">Fournisseur</label>
-                                        <input type="text" class="form-control" id="nameFournisseur"
-                                        title="nameFournisseur" placeholder="foulen" />
-                                        <small class="form-text text-muted">name</small>
-                                    </div>
-                                    <div class="col">
-                                        <label for="">prix</label>
-                                        <input type="text" class="form-control" id="crediFournisseur"
-                                        placeholder="_,_$" />
-                                        <small class="form-text text-muted">unt Dinar</small>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-3">
-                                        <button class="btn btn-outline-danger" id="btnAjoutFor"
-                                        onclick="fourn()">ajouter</button>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-                    <div class="row ajoute-fournisser">
-                    <div class="col">
-                        <div class="table-responsive">
-                            
-                            <table class="table text-center table-striped table-sm">
-                                <thead>
-                                    <tr>
-                                        <th class="text-primary">Fornissuer</th>
-                                        <th class="text-muted">Solde</th>
-                                        <th>Satting</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="tfbody"></tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                
-                <div id="boxFore" class="boxx">
-                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                        <h1 class="h2"><i class="bi bi-journal-text"></i><span class="text-primary">C</span>ommonde
-                        </h1>
-                        <div class="btn-toolbar mb-2 mb-md-0">
-                            <div class="btn-group mr-2">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-                            </div>
-                            <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                                <span data-feather="calendar"></span>
-                                This week
-                            </button>
-                        </div>
-                    </div>
-                    <table class="table text-center table-striped table-sm">
-                        <thead>
-                            <tr>
-                                <th>Article</th>
-                                <th>Client</th>
-                                <th>Telephone</th>
-                                <th>Date</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Nape power Hot 1O</td>
-                                <td>Assma</td>
-                                <td>49 232 847</td>
-                                <td>20-4-2025</td>
-                            </tr>
-                            <tr>
-                                <td>Batter S20</td>
-                                <td>Ahmed</td>
-                                <td>23 455 767</td>
-                                <td>04-04-2025</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            
-
+                <button
+                  type="button"
+                  class="btn btn-sm btn-outline-secondary dropdown-toggle"
+                >
+                  <span data-feather="calendar"></span>
+                  This week
+                </button>
+              </div>
             </div>
-            
+            <div class="container">
+              <!-- Start Ajouter Client -->
+              <!-- Start Modale  -->
+              <!-- Button trigger modal -->
+              <!-- <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Launch demo modal
+              </button> -->
+
+              <!-- Modal -->
+
+              <!-- <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        Modal title
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">...</div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        Save changes
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+               -->
+              <!-- End Modale -->
+
+              <p class="d-inline-flex gap-1">
+                <!-- <a
+                  class="btn btn-primary"
+                  data-bs-toggle="collapse"
+                  href="#collapseExample"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapseExample"
+                >
+                  Link with href
+                </a> -->
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseExample"
+                  aria-expanded="false"
+                  aria-controls="collapseExample"
+                >
+                  Ajouter Client
+                </button>
+              </p>
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                  <div class="ajouteClient p-4">
+                    <div class="row">
+                      <div class="col">
+                        <h3>
+                          <span class="text-primary">R</span>éception un
+                          appareil
+                        </h3>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <form
+                        class="text-primary bg-yellow p-2 border-bottom border-primary"
+                      >
+                        <div class="row">
+                          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                            <label class="visually-hidden" for="nomeClient"
+                              >Nome Client</label
+                            >
+                            <div class="input-group">
+                              <div class="input-group-text">
+                                <i class="bi bi-person"></i>
+                              </div>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="nomeClient"
+                                placeholder="Jane Doe"
+                              />
+
+                            </div>
+                          </div>
+                          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                            <label class="visually-hidden" for="appareil"
+                              >Appareil</label
+                            >
+                            <div class="input-group">
+                              <div class="input-group-text">
+                                <i class="bi bi-phone"></i>
+                              </div>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="appareil"
+                                placeholder="Samsung S20 Ult"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                            <label class="visually-hidden" for="numeroTélèphone"
+                              >Numero télèphone</label
+                            >
+                            <div class="input-group">
+                              <div class="input-group-text">
+                                <i class="bi bi-telephone-plus"></i>
+                              </div>
+                              <input
+                                type="number"
+                                class="form-control"
+                                id="numeroTélèphone"
+                                placeholder="+216 98 765 432"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                            <label class="visually-hidden" for="panne"
+                              >Panne</label
+                            >
+                            <select class="form-select form-control" id="panne">
+                              <option selected>Pane...</option>
+                              <option value="Afficheur">Afficheur</option>
+                              <option value="Concteur">Concteur</option>
+                              <option value="Micro">Micro</option>
+                              <option value="Frp">Frp</option>
+                              <option value="Flashe">Flashe</option>
+                              <option value="6">Autr...</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                            <label class="visually-hidden" for="avence"
+                              >Avence</label
+                            >
+                            <div class="input-group">
+                              <div class="input-group-text">
+                                <i class="bi bi-currency-dollar"></i>
+                              </div>
+                              <input
+                                type="number"
+                                class="form-control"
+                                id="avence"
+                                placeholder="120 DTN"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                            <label class="visually-hidden" for="prix"
+                              >Prix</label
+                            >
+                            <div class="input-group">
+                              <div class="input-group-text">
+                                <i class="bi bi-currency-dollar"></i>
+                              </div>
+                              <input
+                                type="number"
+                                class="form-control"
+                                id="prix"
+                                placeholder="120 DTN"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                            <label class="visually-hidden" for="rend"
+                              >Rendez-vous</label
+                            >
+                            <div class="input-group">
+                              <div class="input-group-text">
+                                <i class="bi bi-calendar-date"></i>
+                              </div>
+                              <input
+                                type="date"
+                                class="form-control"
+                                id="rend"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                            <label class="visually-hidden" for="position"
+                              >Position</label
+                            >
+                            <div class="input-group">
+                              <div class="input-group-text">
+                                <i class="bi bi-geo-alt"></i>
+                              </div>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="position"
+                                placeholder="A01"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row p-4">
+                          <div class="col">
+                            <button
+                              onclick="red()"
+                              id="btnRecevoir"
+                              class="btn btn-primary"
+                            >
+                              <i class="bi bi-database-fill-add"></i> recevoir
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Ajouter Client -->
+
+              <!-- Start Statstique -->
+              <div class="static ali p-2">
+                <div class="container">
+                  <h3>Statstique <i class="bi bi-graph-up-arrow"></i></h3>
+                  <div class="row align-items-center">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                      <canvas id="myChart"></canvas>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                      <canvas id="myChart2"></canvas>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 p-4">
+                      <div id="myApp">
+                        <h3 class="text-danger">rapport</h3>
+                        <p class="text-primary">Prix toutal {{ som() }}</p>
+                        <p>number appareil {{ somT() }}</p>
+                        <p>cridi toutal {{ somF() }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Statstique -->
+
+              <div class="row">
+                <div class="col">
+                  <h2>
+                    <span class="text-primary">L</span>iste
+                    <span class="text-primary">C</span>lien
+                  </h2>
+                </div>
+                <div class="col">
+                  <!-- Start Recherche -->
+                  <div class="contentSerche col">
+                    <div class="row">
+                      <div class="col-5">
+                        <div class="input-group">
+                          <div class="input-group-text">
+                            <i class="bi bi-search"></i>
+                          </div>
+                          <input
+                            onkeyup="recherch(this.value)"
+                            class="form-control form-control-dark"
+                            id="search"
+                            type="text"
+                            placeholder="Search"
+                            aria-label="Search"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-1">
+                        <button
+                          type="button"
+                          onclick="getSearchMode(this.id)"
+                          class="btn btn-outline-primary"
+                          id="btnSearchName"
+                        >
+                          <i class="bi bi-person-raised-hand"></i>
+                        </button>
+                      </div>
+                      <div class="col-1">
+                        <button
+                          onclick="getSearchMode(this.id)"
+                          class="btn btn-outline-primary"
+                          id="btnSearchNumero"
+                        >
+                          <i class="bi bi-whatsapp"></i>
+                        </button>
+                      </div>
+                      <div class="col-1">
+                        <button
+                          onclick="getSearchMode(this.id)"
+                          class="btn btn-outline-primary"
+                          id="btnSearchAppareil"
+                        >
+                          <i class="bi bi-phone"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Recherche -->
+                </div>
+              </div>
+              <div class="table-responsive">
+                <table class="table text-center table-striped table-sm table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Nome Clien | <i class="bi bi-person"></i></th>
+                      <th>Apparer | <i class="bi bi-phone"></i></th>
+                      <th>Numero télèphone | <i class="bi bi-whatsapp"></i></th>
+                      <th>
+                        Panne | <i class="fa-solid fa-triangle-exclamation"></i>
+                      </th>
+                      <th>
+                        Avence | <i class="bi bi-currency-dollar"></i>
+                      </th>
+                      <th>Prix | <i class="bi bi-currency-dollar"></i></th>
+                      <th>Position | <i class="bi bi-geo-alt"></i></th>
+                      <th>Update</th>
+                      <th>Suppr</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tcbody"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div id="boxTwe" class="boxx">
+            <div
+              class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+            >
+              <h1 class="h2"><i class="bi bi-tv"></i> Détails Afficheur</h1>
+              <div class="btn-toolbar mb-2 mb-md-0">
+                <div class="btn-group mr-2">
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-outline-secondary"
+                  >
+                    Share
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-outline-secondary"
+                  >
+                    Export
+                  </button>
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-sm btn-outline-secondary dropdown-toggle"
+                >
+                  <span data-feather="calendar"></span>
+                  This week
+                </button>
+              </div>
+            </div>
+            <div id="detaiAfficheur">
+              <h3><span class="text-primary">R</span>éception Afficheur</h3>
+              <form action="">
+                <input type="text" name="" id="" placeholder="Model" />
+                <input type="text" name="" id="" placeholder="Fornisseur" />
+                <input type="text" name="" id="" placeholder="prix" />
+                <br />
+                <button class="btn btn-outline-primary">recption</button>
+              </form>
+              <div class="box1">
+                <div class="box2">
+                  <h6>Prix Aficheur</h6>
+                  <!-- Start Colapss -->
+                  <!-- End Colapss -->
+                  <table class="table text-center table-striped">
+                    <thead>
+                      <tr>
+                        <th>Model</th>
+                        <th>Prix Client</th>
+                        <th>Akrem</th>
+                        <th>Haythem</th>
+                        <th>Aymen</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td
+                          class="text-white text-capitalize fs-6 fw-bolde bg-primary"
+                          colspan="5"
+                        >
+                          samsung
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="1">Sére A</td>
+                      </tr>
+                      <tr>
+                        <td>A01</td>
+                        <td></td>
+                        <td>55</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>A10</td>
+                        <td>100_80</td>
+                        <td>50</td>
+                        <td>..</td>
+                        <td>45</td>
+                      </tr>
+                      <tr>
+                        <td>A10s</td>
+                        <td>100_80</td>
+                        <td>50</td>
+                        <td>..</td>
+                        <td>45</td>
+                      </tr>
+                      <tr>
+                        <td>A11</td>
+                        <td>100_90</td>
+                        <td>50</td>
+                        <td></td>
+                        <td>50</td>
+                      </tr>
+                      <tr>
+                        <td>A12</td>
+                        <td>100_90</td>
+                        <td>50</td>
+                        <td></td>
+                        <td>55</td>
+                      </tr>
+                      <tr>
+                        <td>A13</td>
+                        <td>110_100</td>
+                        <td>60</td>
+                        <td></td>
+                        <td>55</td>
+                      </tr>
+                      <tr>
+                        <td>A14 (4G)</td>
+                        <td>110_100</td>
+                        <td>60</td>
+                        <td></td>
+                        <td>55</td>
+                      </tr>
+                      <tr>
+                        <td>A14 (5G)</td>
+                        <td>110_100</td>
+                        <td>65</td>
+                        <td></td>
+                        <td>60</td>
+                      </tr>
+                      <tr>
+                        <td>A15</td>
+                        <td>140_130</td>
+                        <td>100</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>A20</td>
+                        <td>130_100</td>
+                        <td>87</td>
+                        <td></td>
+                        <td>65</td>
+                      </tr>
+                      <tr>
+                        <td>A21s</td>
+                        <td>100_80</td>
+                        <td>50</td>
+                        <td></td>
+                        <td>55</td>
+                      </tr>
+                      <tr>
+                        <td>A30</td>
+                        <td>130_120</td>
+                        <td>87</td>
+                        <td></td>
+                        <td>70</td>
+                      </tr>
+                      <tr>
+                        <td>A30s</td>
+                        <td>130_120</td>
+                        <td>87</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+
+                      <tr>
+                        <td>A31</td>
+                        <td></td>
+                        <td>88</td>
+                        <td></td>
+                        <td>80</td>
+                      </tr>
+                      <tr>
+                        <td>A32</td>
+                        <td></td>
+                        <td>95</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>A50</td>
+                        <td></td>
+                        <td>87</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>A50s</td>
+                        <td></td>
+                        <td>87</td>
+                        <td></td>
+                        <td>70</td>
+                      </tr>
+                      <tr>
+                        <td>A52</td>
+                        <td></td>
+                        <td>100</td>
+                        <td></td>
+                        <td>95</td>
+                      </tr>
+                      <tr>
+                        <td>A70</td>
+                        <td></td>
+                        <td>135</td>
+                        <td></td>
+                        <td>85</td>
+                      </tr>
+                      <tr>
+                        <td class="text-white bg-primary" colspan="5">
+                          Huawei
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Y5 lit</td>
+                        <td></td>
+                        <td>50</td>
+                      </tr>
+                      <tr>
+                        <td class="text-white bg-primary" colspan="5">
+                          Infinix
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Smart 4</td>
+                        <td>100_80</td>
+                        <td>50</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Smart 5</td>
+                        <td>100_80</td>
+                        <td>50</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Smart 6</td>
+                        <td>100_80</td>
+                        <td>52</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Smart 6HD</td>
+                        <td>105_85</td>
+                        <td>52</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Smart 6+</td>
+                        <td>100-85</td>
+                        <td>55</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Smart 7</td>
+                        <td>100_90</td>
+                        <td>52</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Smart 8</td>
+                        <td>110_100</td>
+                        <td>55</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Smart 9</td>
+                        <td>110_100</td>
+                        <td>60</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Hot 10, Hot 10s, Hot 10 play</td>
+                        <td>110_100</td>
+                        <td>55</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Hot 10s</td>
+                        <td>110_100</td>
+                        <td>55</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Hot 10</td>
+                      </tr>
+                      <tr>
+                        <td class="text-white bg-primary" colspan="5">Oppo</td>
+                      </tr>
+                      <tr>
+                        <td class="text-white bg-primary" colspan="5">Redmi</td>
+                      </tr>
+                      <tr>
+                        <td>A1+ A2+</td>
+                        <td>110_95</td>
+                        <td>55</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>10C</td>
+                        <td>100_90</td>
+                        <td>50</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>9A 9C</td>
+                        <td>100_90</td>
+                        <td>50</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="text-white bg-primary" colspan="5">Nokia</td>
+                      </tr>
+                      <tr>
+                        <td class="text-white bg-primary" colspan="5">Tecno</td>
+                      </tr>
+                      <tr>
+                        <td class="text-white bg-primary" colspan="5">Itel</td>
+                      </tr>
+                      <tr>
+                        <td>A58</td>
+                        <td>110</td>
+                        <td></td>
+                        <td>60</td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="box2">
+                  <h6>Modèles Infinix (2018-2024)</h6>
+                  <table class="table text-center table-striped table-sm">
+                    <thead>
+                      <tr>
+                        <th>Année</th>
+                        <th>Modèles</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>2018</td>
+                        <td>
+                          Infinix Hot 6, Infinix Hot 6 Pro, Infinix Hot S3,
+                          Infinix Zero 5, Infinix Zero 5 Pro, Infinix Note 5,
+                          Infinix Note 5 Stylus, Infinix S3X
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2019</td>
+                        <td>
+                          Infinix Hot 7, Infinix Hot 7 Pro, Infinix S4, Infinix
+                          Smart 3, Infinix Smart 3 Plus, Infinix Zero 6, Infinix
+                          Zero 6 Pro, Infinix Note 6
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2020</td>
+                        <td>
+                          Infinix Hot 9, Infinix Hot 9 Pro, Infinix Note 7,
+                          Infinix Note 7 Lite, Infinix S5, Infinix S5 Pro,
+                          Infinix Zero 8, Infinix Zero 8i, Infinix Smart 4,
+                          Infinix Smart 4 Plus
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2021</td>
+                        <td>
+                          Infinix Hot 10, Infinix Hot 10 Play, Infinix Hot 10T,
+                          Infinix Note 10, Infinix Note 10 Pro, Infinix Zero X,
+                          Infinix Zero X Pro, Infinix Zero X Neo, Infinix Smart
+                          5, Infinix Smart 5 Pro, Infinix Smart 6
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2022</td>
+                        <td>
+                          Infinix Hot 11, Infinix Hot 11S, Infinix Hot 11 Play,
+                          Infinix Note 11, Infinix Note 11 Pro, Infinix Note
+                          11S, Infinix Zero Ultra, Infinix Zero 5G, Infinix
+                          Smart 6 Plus, Infinix Smart 6 HD
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2023</td>
+                        <td>
+                          Infinix Hot 30, Infinix Hot 30i, Infinix Hot 30 Play,
+                          Infinix Note 30, Infinix Note 30 Pro, Infinix Note 30
+                          VIP, Infinix Zero 30 5G, Infinix GT 10 Pro, Infinix
+                          Smart 7, Infinix Smart 7 Plus
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2024</td>
+                        <td>
+                          Infinix Hot 40, Infinix Hot 40 Pro, Infinix Hot 40i,
+                          Infinix Note 40, Infinix Note 40 Pro, Infinix Zero 40,
+                          Infinix Smart 8, Infinix Smart 8 Plus
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="box2">
+                  <h6>Modèles Samsung 2018-2024 (Liste Complète)</h6>
+                  <table class="table text-center table-striped table-sm">
+                    <thead>
+                      <tr>
+                        <th>Année</th>
+                        <th>Série</th>
+                        <th>Modèles</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- 2018 -->
+                      <tr>
+                        <td rowspan="6">2018</td>
+                        <td>Galaxy S</td>
+                        <td>S9, S9+</td>
+                      </tr>
+                      <tr>
+                        <td>Galaxy Note</td>
+                        <td>Note 9</td>
+                      </tr>
+                      <tr>
+                        <td>Galaxy A</td>
+                        <td>
+                          A6, A6+, A7 (2018), A8 (2018), A8+ (2018), A9 (2018)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Galaxy J</td>
+                        <td>J4, J6, J8, J2 Pro (2018), J2 Core, J4+</td>
+                      </tr>
+                      <tr>
+                        <td>Galaxy M</td>
+                        <td>M20, M30</td>
+                      </tr>
+                      <tr>
+                        <td>Autres</td>
+                        <td>
+                          XCover 4, On6, On8 (2018), Tab A 10.5 (2018), Tab S4
+                        </td>
+                      </tr>
+
+                      <!-- 2019 -->
+                      <tr>
+                        <td rowspan="6">2019</td>
+                        <td>Galaxy S</td>
+                        <td>S10e, S10, S10+, S10 5G</td>
+                      </tr>
+                      <tr>
+                        <td>Galaxy Note</td>
+                        <td>Note 10, Note 10+</td>
+                      </tr>
+                      <tr>
+                        <td>Galaxy A</td>
+                        <td>A10, A20, A30, A40, A50, A60, A70, A80, A90 5G</td>
+                      </tr>
+                      <tr>
+                        <td>Galaxy M</td>
+                        <td>M10, M20, M30, M40</td>
+                      </tr>
+                      <tr>
+                        <td>Galaxy Fold</td>
+                        <td>Galaxy Fold (1ère génération)</td>
+                      </tr>
+                      <tr>
+                        <td>Autres</td>
+                        <td>XCover 4s, Tab S5e, Tab S6</td>
+                      </tr>
+
+                      <!-- 2020 -->
+                      <tr>
+                        <td rowspan="6">2020</td>
+                        <td>Galaxy S</td>
+                        <td>S20, S20+, S20 Ultra</td>
+                      </tr>
+                      <tr>
+                        <td>Galaxy Note</td>
+                        <td>Note 20, Note 20 Ultra</td>
+                      </tr>
+                      <tr>
+                        <td>Galaxy A</td>
+                        <td>
+                          A01, A11, A21, A31, A41, A51, A71, A51 5G, A71 5G
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Galaxy M</td>
+                        <td>M11, M21, M31, M51</td>
+                      </tr>
+                      <tr>
+                        <td>Galaxy Z</td>
+                        <td>Z Flip, Z Fold 2</td>
+                      </tr>
+                      <tr>
+                        <td>Autres</td>
+                        <td>XCover Pro, Tab A7, Tab S7, Tab S7+</td>
+                      </tr>
+
+                      <!-- 2021 -->
+                      <tr>
+                        <td rowspan="6">2021</td>
+                        <td>Galaxy S</td>
+                        <td>S21, S21+, S21 Ultra</td>
+                      </tr>
+                      <tr>
+                        <td>Galaxy Note</td>
+                        <td>Aucun (série mise en pause)</td>
+                      </tr>
+                      <tr>
+                        <td>Galaxy A</td>
+                        <td>A02, A12, A22, A32, A52, A72</td>
+                      </tr>
+                      <tr>
+                        <td>Galaxy M</td>
+                        <td>M12, M22, M32, M42, M52, M62</td>
+                      </tr>
+                      <tr>
+                        <td>Galaxy Z</td>
+                        <td>Z Flip 3, Z Fold 3</td>
+                      </tr>
+                      <tr>
+                        <td>Autres</td>
+                        <td>
+                          XCover 5, Tab A7 Lite, Tab S7 FE, Tab S8 (annoncé fin
+                          2021)
+                        </td>
+                      </tr>
+
+                      <!-- 2022 -->
+                      <tr>
+                        <td rowspan="6">2022</td>
+                        <td>Galaxy S</td>
+                        <td>S22, S22+, S22 Ultra</td>
+                      </tr>
+                      <tr>
+                        <td>Galaxy A</td>
+                        <td>A03, A13, A23, A33, A53, A73</td>
+                      </tr>
+                      <tr>
+                        <td>Galaxy M</td>
+                        <td>M13, M23, M33, M53</td>
+                      </tr>
+                      <tr>
+                        <td>Galaxy Z</td>
+                        <td>Z Flip 4, Z Fold 4</td>
+                      </tr>
+                      <tr>
+                        <td>Autres</td>
+                        <td>
+                          XCover 6 Pro, Tab A8, Tab S8, Tab S8+, Tab S8 Ultra
+                        </td>
+                      </tr>
+
+                      <!-- 2023 -->
+                      <tr>
+                        <td rowspan="6">2023</td>
+                        <td>Galaxy S</td>
+                        <td>S23, S23+, S23 Ultra</td>
+                      </tr>
+                      <tr>
+                        <td>Galaxy A</td>
+                        <td>A14, A24, A34, A54</td>
+                      </tr>
+                      <tr>
+                        <td>Galaxy M</td>
+                        <td>M14, M34, M54</td>
+                      </tr>
+                      <tr>
+                        <td>Galaxy Z</td>
+                        <td>Z Flip 5, Z Fold 5</td>
+                      </tr>
+                      <tr>
+                        <td>Autres</td>
+                        <td>XCover 7, Tab S9, Tab S9+, Tab S9 Ultra</td>
+                      </tr>
+
+                      <!-- 2024 -->
+                      <tr>
+                        <td rowspan="6">2024</td>
+                        <td>Galaxy S</td>
+                        <td>S24, S24+, S24 Ultra (attendus)</td>
+                      </tr>
+                      <tr>
+                        <td>Galaxy A</td>
+                        <td>A15, A25, A35, A55 (attendus)</td>
+                      </tr>
+                      <tr>
+                        <td>Galaxy Z</td>
+                        <td>Z Flip 6, Z Fold 6 (attendus)</td>
+                      </tr>
+                      <tr>
+                        <td>Autres</td>
+                        <td>XCover 8, Tab S10 (attendus)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="boxThree" class="boxx">
+            <div class="container">
+              <h4 class="pt-4">Ajouter Fournisseur</h4>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col">
+                    <label for="">Fournisseur</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nameFournisseur"
+                      title="nameFournisseur"
+                      placeholder="foulen"
+                    />
+                    <small class="form-text text-muted">name</small>
+                  </div>
+                  <div class="col">
+                    <label for="">prix</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="crediFournisseur"
+                      placeholder="_,_$"
+                    />
+                    <small class="form-text text-muted">unt Dinar</small>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-3">
+                    <button
+                      class="btn btn-outline-danger"
+                      id="btnAjoutFor"
+                      onclick="fourn()"
+                    >
+                      ajouter
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row ajoute-fournisser">
+              <div class="col">
+                <div class="table-responsive">
+                  <table class="table text-center table-striped table-sm">
+                    <thead>
+                      <tr>
+                        <th class="text-primary">Fornissuer</th>
+                        <th class="text-muted">Solde</th>
+                        <th>Satting</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tfbody"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="boxFore" class="boxx">
+            <div
+              class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+            >
+              <h1 class="h2">
+                <i class="bi bi-journal-text"></i
+                ><span class="text-primary">C</span>ommonde
+              </h1>
+              <div class="btn-toolbar mb-2 mb-md-0">
+                <div class="btn-group mr-2">
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-outline-secondary"
+                  >
+                    Share
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-outline-secondary"
+                  >
+                    Export
+                  </button>
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-sm btn-outline-secondary dropdown-toggle"
+                >
+                  <span data-feather="calendar"></span>
+                  This week
+                </button>
+              </div>
+            </div>
+            <table class="table text-center table-striped table-sm">
+              <thead>
+                <tr>
+                  <th>Article</th>
+                  <th>Client</th>
+                  <th>Telephone</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Nape power Hot 1O</td>
+                  <td>Assma</td>
+                  <td>49 232 847</td>
+                  <td>20-4-2025</td>
+                </tr>
+                <tr>
+                  <td>Batter S20</td>
+                  <td>Ahmed</td>
+                  <td>23 455 767</td>
+                  <td>04-04-2025</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- Bootstrap Bundle with Popper -->
@@ -972,6 +1284,5 @@
 
     <!-- Custom Scripts -->
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>
