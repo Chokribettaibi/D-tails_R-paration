@@ -26,6 +26,7 @@ let boxFore = document.getElementById('boxFore');
 let totalPrice = document.getElementById('totalPrice');
 let totalDevices = document.getElementById('totalDevices');
 let totalCredit = document.getElementById('totalCredit');
+let totalCreditFor = document.getElementById('totalCreditFor');
 
 // afficheurAff.onclick = affActiv();
 document.addEventListener("click", function(e){
@@ -234,6 +235,7 @@ function shoData() {
     tcbody.innerHTML = tabl;
     totalPrice.innerHTML = product.reduce((total, item) => total + parseFloat(item.prix), 0);
     totalDevices.innerHTML = product.length;
+    totalCreditFor.innerHTML = productFor.reduce((total, item) => total + parseFloat(item.crediFournisseur), 0);
     totalCredit.innerHTML = product.reduce((total, item) => total + parseFloat(item.avence), 0);
 }
 
@@ -286,7 +288,7 @@ function deletData(i) {
     });
     swalWithBootstrapButtons.fire({
         title: "Are you sure?",
-        text: "You won't be able to revert this!",
+        text: "Brass omik thbet mada5elch laya Stok ba3tho",
         icon: "warning",
         showCancelButton: true,
         confirmButtonText: "Yes, delete it!",
@@ -436,10 +438,14 @@ const ctxcn = document.getElementById('myChart2');
 new Chart(ctxcn, {
     type: 'bar',
     data: {
-        labels: ['PrixToutal', 'Cridi Four', 'Stag', 'Green', 'Purple', 'Orange'],
+        labels: ['PrixToutal', 'Cridi Client', 'Fournisseur', 'Green', 'Purple', 'Orange'],
         datasets: [{
             label: '# of Votes',
-            data: [200, 800, 920, 300, 600, 700],
+            data: [
+                product.reduce((total, item) => total + parseFloat(item.prix), 0),
+                product.reduce((total, item) => total + parseFloat(item.avence), 0), 
+                productFor.reduce((total, item) => total + parseFloat(item.crediFournisseur), 0), 
+                300, 600, 700],
             backgroundColor: [
                 "Blue",
                 "#f00",
@@ -459,4 +465,4 @@ new Chart(ctxcn, {
     }
 });
 
-// Vue.js Integration
+console.log(productFor.reduce((total, item) => total + parseFloat(item.crediFournisseur), 0));
