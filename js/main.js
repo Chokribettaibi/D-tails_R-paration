@@ -22,7 +22,10 @@ let boxTwe = document.getElementById('boxTwe');
 let afficheurAff = document.getElementById('afficheurAff');
 let dashboard = document.getElementById('dashboard');
 let boxThree = document.getElementById('boxThree');
-let boxFore = document.getElementById('boxFore')
+let boxFore = document.getElementById('boxFore');
+let totalPrice = document.getElementById('totalPrice');
+let totalDevices = document.getElementById('totalDevices');
+let totalCredit = document.getElementById('totalCredit');
 
 // afficheurAff.onclick = affActiv();
 document.addEventListener("click", function(e){
@@ -50,13 +53,6 @@ document.addEventListener("click", function(e){
     }
 )
 
-// function affActiv(){
-//     for(let i=0;i<=2;i++){
-//         boxx.item(i).classList.toggle('active');
-//     }
-//     console.log('hello')
-// }
-
 // Create Data
 let product;
 if (localStorage.pro != null) {
@@ -72,8 +68,8 @@ function red() {
         numeroTélèphone: numeroTélèphone.value,
         appareil: appareil.value.toLocaleLowerCase(),
         panne: panne.value.toLocaleLowerCase(),
-        avence: avence.value,
-        prix: prix.value,
+        avence: avence.value || 0,
+        prix: prix.value || 0,
         position: position.value,
         dateResption: new Date(),
     };
@@ -92,7 +88,7 @@ function red() {
     shoDataFor();
     shoData();
     clearData();
-    console.log(localStorage.pro);
+    document.getElementById('collapseExample').classList.remove('show');
 }
 
 // Create Fournisseur
@@ -111,6 +107,7 @@ function fourn() {
     productFor.push(newFor);
     localStorage.setItem('proFor', JSON.stringify(productFor));
     shoDataFor();
+    clearDataFur();
 }
 
 // Clear inputs Client
@@ -143,6 +140,78 @@ function validationForm(e) {
     }
 }
 
+// Sort Data by ID (descending)
+function sortByID() {
+    product.reverse();
+    shoData();
+}
+
+// Sort Data by Nome Client
+function sortByNome() {
+    product.sort((a, b) => {
+        return a.nomeClient.localeCompare(b.nomeClient);
+    });
+    shoData();
+}
+
+// Sort Data by Appareil
+function sortByAppareil() {
+    product.sort((a, b) => {
+        return a.appareil.localeCompare(b.appareil);
+    });
+    shoData();
+}
+
+// Sort Data by Numero Téléphone
+function sortByNumero() {
+    product.sort((a, b) => {
+        return a.numeroTélèphone.localeCompare(b.numeroTélèphone);
+    });
+    shoData();
+}
+
+// Sort Data by Panne
+function sortByPanne() {
+    product.sort((a, b) => {
+        return a.panne.localeCompare(b.panne);
+    });
+    shoData();
+}
+
+// Sort Data by Avence (descending)
+function sortByAvence() {
+    product.sort((a, b) => {
+        return parseFloat(b.avence) - parseFloat(a.avence);
+    });
+    shoData();
+}
+
+// Sort Data by Price (descending)
+function sortByPrice() {
+    product.sort((a, b) => {
+        return parseFloat(b.prix) - parseFloat(a.prix);
+    });
+    shoData();
+}
+
+// Sort Data by Position
+function sortByPosition() {
+    product.sort((a, b) => {
+        return a.position.localeCompare(b.position);
+    });
+    shoData();
+}
+
+// Add click events to table headers
+document.getElementById('sortByID').addEventListener('click', sortByID);
+document.getElementById('sortByNome').addEventListener('click', sortByNome);
+document.getElementById('sortByAppareil').addEventListener('click', sortByAppareil);
+document.getElementById('sortByNumero').addEventListener('click', sortByNumero);
+document.getElementById('sortByPanne').addEventListener('click', sortByPanne);
+document.getElementById('sortByAvence').addEventListener('click', sortByAvence);
+document.getElementById('sortByPrice').addEventListener('click', sortByPrice);
+document.getElementById('sortByPosition').addEventListener('click', sortByPosition);
+
 // Show Data Client
 function shoData() {
     let tabl = '';
@@ -163,6 +232,9 @@ function shoData() {
         `;
     }
     tcbody.innerHTML = tabl;
+    totalPrice.innerHTML = product.reduce((total, item) => total + parseFloat(item.prix), 0);
+    totalDevices.innerHTML = product.length;
+    totalCredit.innerHTML = product.reduce((total, item) => total + parseFloat(item.avence), 0);
 }
 
 shoData();
@@ -196,11 +268,11 @@ function updateData(i) {
     mood = 'update';
     tmp = i;
     btnRecevoir.innerHTML = 'Update';
-
     scroll({
         top: 0,
         behavior: 'smooth',
     });
+    document.getElementById('collapseExample').classList.add('show');
 }
 
 // Delete Data
@@ -388,33 +460,3 @@ new Chart(ctxcn, {
 });
 
 // Vue.js Integration
-let vm = new Vue({
-    el: '#myApp',
-    data: {
-        name: 'chokri',
-        counter: 0,
-        tabl: [5, 'fg', 524],
-        tem: new Date(),
-    },
-    methods: {
-        som: function () {
-            let e = 0;
-            for (let i = 0; i < product.length; i++) {
-                e += +product[i].prix;
-            }
-            return e;
-        },
-        somF: function () {
-            let n = 0;
-            for (let i = 0; i < productFor.length; i++) {
-                n += +productFor[i].crediFournisseur;
-            }
-            return n;
-        },
-        somT: function () {
-            let nbt = 0;
-            nbt = product.length;
-            return nbt;
-        }
-    }
-});

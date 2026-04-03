@@ -1,43 +1,26 @@
 html {
     scroll-behavior: smooth;
 }
-/* .ajoute-fournisser{
-  background-color: #c8cddb;
-  border-radius: 20px;
-} */
 .boxx {
   display: none;
 };
 .boxx.active {
   display: block;
 };
-/* #boxTwe h2::first-letter {
-  color:#0d6efd;
-  background-color: #000;
-}; */
 #detaiAfficheur {
   display: flex;
   gap: 80px;
-  /* grid-template-columns: 400px 400px; */
 };
 #boxTwe{
   color: red;
 }
-.box1 {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: 60% 20% 20%;
-}
+
 .box2 {
   padding-top:100px ;
   display: inline-block;
-  /* width: 400px; */
   height: 600px;
-  /* border: 2px solid red; */
-  /* border-radius: 20px; */
   padding: 20px;
   overflow: scroll;
-  /* box-shadow: 10px 10px 2px #0d6efd; */
 }
 .box2 h6 {
   color: #0d6efd;
@@ -45,12 +28,6 @@ html {
   /* position: fixed; */
   display: none;
 }
-.box2 table thead {
-  /* width: 100%; */
-  /* position: fixed; */
-  /* background-color: #0d6dfd; */
-}
-
 
 /* #myChart {
     width: 20%;
@@ -119,20 +96,3 @@ html {
  /* loder 2 */
 
   /* HTML: <div class="loader"></div> */
-.loader {
-    width: 90px;
-    height: 14px;
-    color: #000;
-    background: 
-      linear-gradient(90deg,#0000 16px, currentColor 0 30px, #0000 0),
-      radial-gradient(circle closest-side at 68% 50%, currentColor 92%,#0000),
-      conic-gradient(from   45deg at calc(100% - 7px) 50%,currentColor 90deg,#0000 0),
-      conic-gradient(from -135deg at             7px  50%,currentColor 90deg,#0000 0);
-    background-position: 0 0;
-    background-size: calc(3*100%/4) 100%;
-    background-repeat: repeat-x;
-    animation: l9 2s infinite linear;
-  }
-  @keyframes l9 {
-      100% {background-position: -300% 0}
-  }
