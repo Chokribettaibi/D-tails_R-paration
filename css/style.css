@@ -28,7 +28,14 @@ html {
   /* position: fixed; */
   display: none;
 }
-
+#myApp {
+  background-color: #7d99d356;
+  border: 1px solid #7d9ad3c0;
+  border-radius: 10px;
+}
+#collapseExample {
+  border-radius: 10px;
+}
 /* #myChart {
     width: 20%;
     height: 50%;

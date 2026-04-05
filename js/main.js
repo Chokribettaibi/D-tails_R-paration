@@ -72,12 +72,9 @@ function red() {
         avence: avence.value || 0,
         prix: prix.value || 0,
         position: position.value,
+        rend: rend.value || 'Sans rendez-vous',
         dateResption: new Date(),
     };
-    scroll({
-        top: 100000,
-        behavior: 'smooth',
-    });
     if (mood === 'create') {
         product.push(newPro);
         localStorage.setItem('pro', JSON.stringify(product));
@@ -119,6 +116,9 @@ function clearData() {
     panne.value = '';
     avence.value = '';
     prix.value = '';
+    position.value = '';
+    rend.value = '';
+
 }
 
 // Clear inputs Fournisseur
@@ -203,6 +203,15 @@ function sortByPosition() {
     shoData();
 }
 
+// Sort Data by Rendez-vous
+function sortByRendezvous() {
+    product.sort((a, b) => {
+        return a.rend.localeCompare(b.rend);
+    });
+    shoData();
+}
+
+
 // Add click events to table headers
 document.getElementById('sortByID').addEventListener('click', sortByID);
 document.getElementById('sortByNome').addEventListener('click', sortByNome);
@@ -212,6 +221,7 @@ document.getElementById('sortByPanne').addEventListener('click', sortByPanne);
 document.getElementById('sortByAvence').addEventListener('click', sortByAvence);
 document.getElementById('sortByPrice').addEventListener('click', sortByPrice);
 document.getElementById('sortByPosition').addEventListener('click', sortByPosition);
+document.getElementById('sortByRendezvous').addEventListener('click', sortByRendezvous);
 
 // Show Data Client
 function shoData() {
@@ -227,6 +237,7 @@ function shoData() {
             <td>${product[i].avence}</td>
             <td>${product[i].prix}</td>
             <td>${product[i].position}</td>
+            <td>${product[i].rend}</td>
             <td><button class="btn btn-outline-primary" onclick="updateData(${i})"><i class="bi bi-arrow-repeat"></i></button></td>
             <td><button class="btn btn-outline-danger" onclick="deletData(${i})"><i class="bi bi-trash3-fill"></i></button></td>
         </tr>
@@ -267,13 +278,10 @@ function updateData(i) {
     avence.value = product[i].avence;
     prix.value = product[i].prix;
     position.value = product[i].position;
+    rend.value = product[i].rend;
     mood = 'update';
     tmp = i;
     btnRecevoir.innerHTML = 'Update';
-    scroll({
-        top: 0,
-        behavior: 'smooth',
-    });
     document.getElementById('collapseExample').classList.add('show');
 }
 
@@ -360,7 +368,8 @@ function recherch(e) {
                     <td>${product[i].avence}</td>
                     <td>${product[i].prix}</td>
                     <td>${product[i].position}</td>
-                    <td class="text-primary">En attente</td>
+                    <td>${product[i].rend}</td>
+                    <td><button class="btn btn-outline-primary" onclick="updateData(${i})"><i class="bi bi-arrow-repeat"></i></button></td>
                     <td><button class="btn btn-outline-danger" onclick="deletData(${i})">Delete</button></td>
                 </tr>
                 `;
@@ -379,7 +388,8 @@ function recherch(e) {
                     <td>${product[i].avence}</td>
                     <td>${product[i].prix}</td>
                     <td>${product[i].position}</td>
-                    <td class="text-primary">En attente</td>
+                    <td>${product[i].rend}</td>
+                    <td><button class="btn btn-outline-primary" onclick="updateData(${i})"><i class="bi bi-arrow-repeat"></i></button></td>
                     <td><button class="btn btn-outline-danger" onclick="deletData(${i})">Delete</button></td>
                 </tr>
                 `;
@@ -398,7 +408,8 @@ function recherch(e) {
                     <td>${product[i].avence}</td>
                     <td>${product[i].prix}</td>
                     <td>${product[i].position}</td>
-                    <td class="text-primary">En attente</td>
+                    <td>${product[i].rend}</td>
+                    <td><button class="btn btn-outline-primary" onclick="updateData(${i})"><i class="bi bi-arrow-repeat"></i></button></td>
                     <td><button class="btn btn-outline-danger" onclick="deletData(${i})">Delete</button></td>
                 </tr>
                 `;

@@ -109,7 +109,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <span data-feather="bar-chart-2"></span>
-                  Carte maire
+                  Cashe
                 </a>
               </li>
               <li class="nav-item">
@@ -191,7 +191,46 @@
               </div>
             </div>
             <div class="container">
-              <!-- Start Ajouter Client -->
+
+
+              <!-- Start Statstique -->
+              <div class="static p-2">
+                <div class="container">
+                  <h3><span class="text-primary">S</span>tatstique <i class="bi bi-graph-up-arrow"></i></h3>
+                  <div class="row align-items-center">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                      <canvas id="myChart"></canvas>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                      <canvas id="myChart2"></canvas>
+                    </div>
+                    <div
+                      class="col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 p-4"
+                    >
+                      <div class="p-2 rounded-3" id="myApp">
+                        <h3 class="text-danger"><i class="bi bi-file-earmark-text"></i> Rapport</h3>
+                        <div class="conainer bg-light p-2 rounded-3">
+                          <p class="text-primary d-flex justify-content-between">
+                            Prix toutal: <strong><span id="totalPrice"></span> dt</strong>
+                          </p>
+                          <p class="d-flex justify-content-between">
+                            Nombre Appareil: <strong><span id="totalDevices"></span> <i class="bi bi-phone"></i></strong>
+                          </p>
+                          <p class="d-flex justify-content-between">
+                            Crédit Fournisseur: <strong><span id="totalCreditFor"></span> dt</strong>
+                          </p>
+                          <p class="d-flex justify-content-between">
+                            Total Avance: <strong> <span id="totalCredit"></span> dt</strong> 
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Statstique -->
+
+                            <!-- Start Ajouter Client -->
               <!-- Start Modale  -->
               <!-- Button trigger modal -->
               <!-- <button
@@ -267,13 +306,13 @@
                 </button>
               </p>
               <div class="collapse" id="collapseExample">
-                <div class="card card-body">
+                <div class="card card-body bg-light">
                   <div class="ajouteClient p-2 bg-danger-subtle">
                     <div class="row">
                       <div class="col">
-                        <h3>
+                        <h3 class="text-center p-2 rounded-3">
                           <span class="text-primary">R</span>éception un
-                          appareil
+                          appareil <i class="bi bi-phone"></i>
                         </h3>
                       </div>
                     </div>
@@ -281,6 +320,8 @@
                       <form
                         class="text-primary bg-yellow p-2  rounded-3"
                       >
+                      <fieldset>
+                        <legend>Info Client <i class="bi bi-exclamation-diamond"></i></legend>
                         <div class="row">
                           <div
                             class="col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3"
@@ -429,8 +470,9 @@
                             </div>
                           </div>
                         </div>
-                        <div class="row">
-                          <div class="col pt-4">
+                        <div class="row justify-content-end">
+                          
+                          <div class="col-xs-1 col-lg-2 pt-4">
                             <button
                               type="submit"
                               onclick="red()"
@@ -441,6 +483,7 @@
                             </button>
                           </div>
                         </div>
+                        </fieldset>
                       </form>
                     </div>
                   </div>
@@ -448,43 +491,14 @@
               </div>
               <!-- End Ajouter Client -->
 
-              <!-- Start Statstique -->
-              <div class="static ali p-2">
-                <div class="container">
-                  <h3>Statstique <i class="bi bi-graph-up-arrow"></i></h3>
-                  <div class="row align-items-center">
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                      <canvas id="myChart"></canvas>
-                    </div>
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                      <canvas id="myChart2"></canvas>
-                    </div>
-                    <div
-                      class="col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 p-4"
-                    >
-                      <div id="myApp">
-                        <h3 class="text-danger">rapport</h3>
-                        <p class="text-primary">
-                          Prix toutal: <span id="totalPrice"></span> dt
-                        </p>
-                        <p>number appareil: <span id="totalDevices"></span></p>
-                        <p>crédit fournisseur: <span id="totalCreditFor"></span> dt</p>
-                        <p>crédit total: <span id="totalCredit"></span> dt</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End Statstique -->
-
-              <div class="row">
+              <div class="row pt-4 pb-2  border-bottom">
                 <div class="col-6">
                   <h2>
                     <span class="text-primary">L</span>iste
                     <span class="text-primary">C</span>lien
                   </h2>
                 </div>
-                <div class="col-6">
+                <div class="col-6 bg-light p-2 rounded-3">
                   <!-- Start Recherche -->
                     <div class="recherch d-flex">
                       <div class="row">
@@ -494,7 +508,7 @@
                             <i class="bi bi-search"></i>
                           </div>
                           <input
-                            onkeyup="recherch(this.value)"
+                            onkeyup="recherch(this.value.toLowerCase())"
                             class="form-control form-control-dark"
                             id="search"
                             type="text"
@@ -550,10 +564,10 @@
                         Apparer | <i class="bi bi-phone"></i>
                       </th>
                       <th id="sortByNumero">
-                        Numero télèphone | <i class="bi bi-whatsapp"></i>
+                        Téléphone | <i class="bi bi-whatsapp"></i>
                       </th>
                       <th id="sortByPanne">
-                        Panne | <i class="fa-solid fa-triangle-exclamation"></i>
+                        Panne | <i class="bi bi-exclamation-diamond"></i>
                       </th>
                       <th id="sortByAvence">
                         Avence | <i class="bi bi-currency-dollar"></i>
@@ -563,6 +577,9 @@
                       </th>
                       <th id="sortByPosition">
                         Position | <i class="bi bi-geo-alt"></i>
+                      </th>
+                      <th id="sortByRendezvous">
+                        Rendez-vous | <i class="bi bi-calendar-date"></i>
                       </th>
                       <th>Update</th>
                       <th>Suppr</th>
@@ -1189,119 +1206,137 @@
 
           <div id="boxThree" class="boxx">
             <div class="container">
-              <h4 class="pt-4">Ajouter Fournisseur</h4>
-              <div class="form-group">
-                <div class="row">
-                  <div class="col">
-                    <label for="">Fournisseur</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="nameFournisseur"
-                      title="nameFournisseur"
-                      placeholder="foulen"
-                    />
-                    <small class="form-text text-muted">name</small>
+              <h4 class="pt-4">Fournisseur</h4>
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseExample2"
+                  aria-expanded="false"
+                  aria-controls="collapseExample"
+                >
+                  Ajouter Fournisseur
+                </button>
+              </p>
+              <div class="collapse" id="collapseExample2">
+                <div class="card card-body">
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col">
+                        <label for="">Fournisseur</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="nameFournisseur"
+                          title="nameFournisseur"
+                          placeholder="foulen"
+                        />
+                        <small class="form-text text-muted">name</small>
+                      </div>
+                      <div class="col">
+                        <label for="">prix</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="crediFournisseur"
+                          placeholder="_,_$"
+                        />
+                        <small class="form-text text-muted">unt Dinar</small>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-3">
+                        <button
+                          class="btn btn-outline-danger"
+                          id="btnAjoutFor"
+                          onclick="fourn()"
+                        >
+                          ajouter
+                        </button>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col">
-                    <label for="">prix</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="crediFournisseur"
-                      placeholder="_,_$"
-                    />
-                    <small class="form-text text-muted">unt Dinar</small>
+
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-3">
+                <div class="row ajoute-fournisser">
+                  <div class="col">
+                    <div class="table-responsive">
+                      <table class="table text-center table-striped table-sm">
+                        <thead>
+                          <tr>
+                            <th class="text-primary">Fornissuer</th>
+                            <th class="text-muted">Solde</th>
+                            <th class="text-muted">Satting</th>
+                          </tr>
+                        </thead>
+                        <tbody id="tfbody"></tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>  
+
+            </div>
+            <div id="boxFore" class="boxx">
+              <div
+                class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+              >
+                <h1 class="h2">
+                  <i class="bi bi-journal-text"></i
+                  ><span class="text-primary">C</span>ommonde
+                </h1>
+                <div class="btn-toolbar mb-2 mb-md-0">
+                  <div class="btn-group mr-2">
                     <button
-                      class="btn btn-outline-danger"
-                      id="btnAjoutFor"
-                      onclick="fourn()"
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
                     >
-                      ajouter
+                      Share
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      Export
                     </button>
                   </div>
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-outline-secondary dropdown-toggle"
+                  >
+                    <span data-feather="calendar"></span>
+                    This week
+                  </button>
                 </div>
               </div>
-            </div>
-            <div class="row ajoute-fournisser">
-              <div class="col">
-                <div class="table-responsive">
-                  <table class="table text-center table-striped table-sm">
-                    <thead>
-                      <tr>
-                        <th class="text-primary">Fornissuer</th>
-                        <th class="text-muted">Solde</th>
-                        <th>Satting</th>
-                      </tr>
-                    </thead>
-                    <tbody id="tfbody"></tbody>
-                  </table>
-                </div>
-              </div>
+              <table class="table text-center table-striped table-sm">
+                <thead>
+                  <tr>
+                    <th>Article</th>
+                    <th>Client</th>
+                    <th>Telephone</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Nape power Hot 1O</td>
+                    <td>Assma</td>
+                    <td>49 232 847</td>
+                    <td>20-4-2025</td>
+                  </tr>
+                  <tr>
+                    <td>Batter S20</td>
+                    <td>Ahmed</td>
+                    <td>23 455 767</td>
+                    <td>04-04-2025</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
 
-          <div id="boxFore" class="boxx">
-            <div
-              class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
-            >
-              <h1 class="h2">
-                <i class="bi bi-journal-text"></i
-                ><span class="text-primary">C</span>ommonde
-              </h1>
-              <div class="btn-toolbar mb-2 mb-md-0">
-                <div class="btn-group mr-2">
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    Share
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    Export
-                  </button>
-                </div>
-                <button
-                  type="button"
-                  class="btn btn-sm btn-outline-secondary dropdown-toggle"
-                >
-                  <span data-feather="calendar"></span>
-                  This week
-                </button>
-              </div>
-            </div>
-            <table class="table text-center table-striped table-sm">
-              <thead>
-                <tr>
-                  <th>Article</th>
-                  <th>Client</th>
-                  <th>Telephone</th>
-                  <th>Date</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Nape power Hot 1O</td>
-                  <td>Assma</td>
-                  <td>49 232 847</td>
-                  <td>20-4-2025</td>
-                </tr>
-                <tr>
-                  <td>Batter S20</td>
-                  <td>Ahmed</td>
-                  <td>23 455 767</td>
-                  <td>04-04-2025</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
         </div>
       </div>
     </div>
